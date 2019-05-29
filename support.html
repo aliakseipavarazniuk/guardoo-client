@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="page description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2980B9">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2980B9">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2980B9">
+    <title>Support</title>
+    <link rel="icon" type="image/png" href="/path/favicon.png" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/path/favicon.ico" /><![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/rawline.css" rel="stylesheet">
+    <link href="css/semantic.min.css" rel="stylesheet">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="images/icons/logo.svg" alt="Logo"></a>
+        <a class="click" href="#">
+            <img src="images/icons/bars-blue.svg" alt="Blue bars">
+        </a>
+        <div class="welcome">
+            <a href="#" id="pop-up">
+                <span>Welcome back, John Doe!</span>
+                <img src="images/icons/default-avatar.svg" alt="Default avatar">
+                <img src="images/icons/arrow-header.svg" alt="Header avatar">
+            </a>
+            <!-- Pop-up -->
+            <div class="ui popup transition">
+                <div class="pop-up-menu">
+                    <a href="settings.html">Account Settings</a>
+                    <a href="#">Add Website</a>
+                    <a href="billing.html">Billing</a>
+                </div>
+            </div>
+            <!-- Pop-up -->
+        </div>
+    </header>
+    <div class="page">
+        <!-- Hamburger-menu -->
+        <div class="mobile-modal-menu">
+            <a class="burger" href="#">
+                <img src="images/icons/bars-white.svg" alt="White bars">
+            </a>
+            <div class="ui secondary vertical menu">
+                <a class="active item" href="server.html">Server</a>
+                <a class="item" href="deploy.html">Domain</a>
+                <a class="item">Firewall</a>
+                <a class="item" href="support.html">Support</a>
+                <a class="item">Affiliate</a>
+                <a class="item" href="billing.html">Billing</a>
+                <a class="item" href="account_settings.php">Settings</a>
+                <a class="item">Logout</a>
+            </div>
+        </div>
+        <!-- Hamburger-menu -->
+        <!-- Side-menu -->
+        <div id="side">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="server.html">
+                            <img src="images/side-menu-icons/server.svg" alt="Server">
+                            <span>Server</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/domain.svg" alt="Domain">
+                            <span>Domain</span></a>
+                    </li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/firewall.svg" alt="Firewall">
+                            <span>Firewall</span></a></li>
+                    <li><a class="active" href="support">
+                            <img src="images/side-menu-icons/support-active.svg" alt="Active Support">
+                            <span>Support</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/affilate.svg" alt="Affiliate">
+                            <span>Affiliate</span></a></li>
+                    <li><a href="billing.html">
+                            <img src="images/side-menu-icons/billing.svg" alt="Billing">
+                            <span>Billing</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side-menu -->
+        <div id="container">
+            <div>
+                <div class="center-support">
+                    <h2>Support</h2>
+                    <ul class="tabs-support">
+                        <li class="active" data-tab-id="base"><span>Knowledge Base</span></li>
+                        <li data-tab-id="tickets"><span>Tickets</span></li>
+                    </ul>
+                    <!-- 1 Tab. Knowledge Base-->
+                    <div class="tabs-content active" data-tab-id="base">
+                        <div id="support-sections">
+                            <div class="support-sections-card">
+                                <img src="images/icons/faq.svg" alt="FAQ">
+                                <p>FAQ</p>
+                            </div>
+                            <div class="support-sections-card">
+                                <img src="images/icons/community.svg" alt="Community">
+                                <p>Community</p>
+                            </div>
+                            <div class="support-sections-card">
+                                <img src="images/icons/open-ticket.svg" alt="Open ticket">
+                                <p>Open ticket</p>
+                            </div>
+                        </div>
+                        <h2>Popular FAQ Categories</h2>
+                        <div id="support-faq">
+                            <div class="support-faq-card">
+                                <img src="images/icons/user-circle.svg" alt="User">
+                                <h2>My Account</h2>
+                                <ul>
+                                    <li>
+                                        <div class="circle-gray"></div>Update account information
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Change password
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Change username
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Delete account
+                                    </li>
+                                </ul>
+                                <p>View More</p>
+                            </div>
+                            <div class="support-faq-card">
+                                <img src="images/icons/money.svg" alt="Money">
+                                <h2>Payment Options</h2>
+                                <ul>
+                                    <li>
+                                        <div class="circle-gray"></div>Update account information
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Change password
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Change username
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Delete account
+                                    </li>
+                                </ul>
+                                <p>View More</p>
+                            </div>
+                            <div class="support-faq-card">
+                                <img src="images/icons/shield.svg" alt="Shield">
+                                <h2>Firewalls</h2>
+                                <ul>
+                                    <li>
+                                        <div class="circle-gray"></div>Update account information
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Change password
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Change username
+                                    </li>
+                                    <li>
+                                        <div class="circle-gray"></div>Delete account
+                                    </li>
+                                </ul>
+                                <p>View More</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of the 1 Tab. Knowledge Base-->
+                    <!-- 2 Tab. Tickets-->
+                    <div class="tabs-content" data-tab-id="tickets">
+                        <h2 id="tickets-h2">Tickets</h2>
+                        <table id="tickets">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Last message</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td><a class="ticket-click">Password update</a></td>
+                                <td>12 days ago</td>
+                                <td>Closed</td>
+                                <td>
+                                    <span class="ticket-click">
+                                        <img src="images/icons/bubble.svg" alt="Bubble">
+                                        <img src="images/icons/bubble-blue.svg" alt="Blue bubble">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a class="ticket-click">Reload server #2</a></td>
+                                <td>5 hours ago</td>
+                                <td>Open</td>
+                                <td>
+                                    <span class="ticket-click">
+                                        <img src="images/icons/bubble.svg" alt="Bubble">
+                                        <img src="images/icons/bubble-blue.svg" alt="Blue bubble">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="all-tickets"><span><span class="manage-arrow"></span><span id="all-tickets-click">all tickets</span></span></div>
+                        <table id="tickets-copy">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Last message</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td><a class="ticket-click">Password update</a></td>
+                                <td>12 days ago</td>
+                                <td>Closed</td>
+                                <td>
+                                    <span class="ticket-click">
+                                        <img src="images/icons/bubble.svg" alt="Bubble">
+                                        <img src="images/icons/bubble-blue.svg" alt="Blue bubble">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a class="ticket-click">Reload server #2</a></td>
+                                <td>5 hours ago</td>
+                                <td>Open</td>
+                                <td>
+                                    <span class="ticket-click">
+                                        <img src="images/icons/bubble.svg" alt="Bubble">
+                                        <img src="images/icons/bubble-blue.svg" alt="Blue bubble">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="button">
+                            <a>
+                                <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                <span>Create New Ticket</span>
+                            </a>
+                        </div>
+                        <h3>Tickets info</h3>
+                        <p>
+                            In the file you put in /etc/init.d/ you have <b>to set it executable</b> with: <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br><br>
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and<br> scrambled it to make a type specimen book. <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <div id="new-ticket">
+                            <div id="selection">
+                                <div class="selection-active">General Support</div>
+                                <div>Billing Questions</div>
+                            </div>
+                            <div id="none" class="ui fluid selection large dropdown" tabindex="0">
+                                <div class="text">None</div>
+                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                <div class="menu transition hidden" tabindex="-1">
+                                    <div class="item">Ticket</div>
+                                    <div class="item">Ticket</div>
+                                    <div class="item">Ticket</div>
+                                </div>
+                            </div>
+                            <div class="ui grid">
+                                <div class="ui large input">
+                                    <input type="text" id="input-subject" name="input-subject" required>
+                                    <label for="input-subject">Subject</label>
+                                </div>
+                            </div>
+                            <textarea id="message2" placeholder="Message">
+</textarea>
+                            <div id="browse">
+                                <p>Attach File ( Max file size is 4.1 MB )</p>
+                                <div id="browse-button">Browse…</div>
+                                <span>No file selected.</span>
+                            </div>
+                            <div class="button-add">Create Ticket</div>
+                        </div>
+                        <div id="ticket-messaging">
+                            <a href="support">
+                                <img src="images/icons/arrow-left.svg" alt="Left arrow"> Back to Ticket List</a>
+                            <h2>Reload request</h2>
+                            <h3>Support request № 2434356</h3>
+                            <div id="ticket-messaging-field">
+                                <div id="conversation">
+                                    <div>
+                                        <div class="big-circle gray">VK</div>
+                                        <section>
+                                            <div id="reply">Reply</div>
+                                            <h4>Vlad Kazak</h4>
+                                            <h5>27 oct 15:30</h5>
+                                            <span>Hey, i have some issues with my server. here the log file. <br><br> Best regards,<br>Vlad </span>
+                                        </section>
+                                    </div>
+                                    <div>
+                                        <div class="big-circle blue"><img src="images/icons/open-ticket-white.svg" alt="White open ticket"></div>
+                                        <section>
+                                            <h4>Alex Stepperson</h4>
+                                            <h5>27 oct 15:35</h5>
+                                            <span>Chinese authorities have ordered Beijing-based cryptocurrency exchanges to stop trading and immediately notify users of their closure, signaling a widening crackdown by authorities on the industry to contain financial risks.<br><br>Regards,<br>Alex</span>
+                                        </section>
+                                    </div>
+                                    <div>
+                                        <div class="big-circle gray">VK</div>
+                                        <section>
+                                            <h4>Vlad Kazak</h4>
+                                            <h5>27 oct 15:30</h5>
+                                            <span>Hey, i have some issues with my server. here the log file. <br><br> Best regards,<br>Vlad </span>
+                                        </section>
+                                    </div>
+                                    <div>
+                                        <div class="big-circle blue"><img src="images/icons/open-ticket-white.svg" alt="White open ticket"></div>
+                                        <section>
+                                            <h4>Alex Stepperson</h4>
+                                            <h5>27 oct 15:35</h5>
+                                            <span>Chinese authorities have ordered Beijing-based cryptocurrency exchanges to stop trading and immediately notify users of their closure, signaling a widening crackdown by authorities on the industry to contain financial risks.<br><br>Regards,<br>Alex</span>
+                                        </section>
+                                    </div>
+                                    <div>
+                                        <div class="big-circle gray">VK</div>
+                                        <section>
+                                            <textarea id="message" placeholder="Message"></textarea>
+                                            <span>
+                                                <img src="images/icons/attachment.svg" alt="Attachment">
+                                                <img src="images/icons/attachment-blue.svg" alt="Blue attachment">
+                                            </span>
+                                            <div id="submit">Submit</div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of the 2 Tab. Tickets-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

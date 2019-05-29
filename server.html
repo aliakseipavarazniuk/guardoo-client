@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="page description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2980B9">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2980B9">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2980B9">
+    <title>Server</title>
+    <link rel="icon" type="image/png" href="/path/favicon.png" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/path/favicon.ico" /><![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/rawline.css" rel="stylesheet">
+    <link href="css/semantic.min.css" rel="stylesheet">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="images/icons/logo.svg" alt="Logo"></a>
+        <a class="click" href="#">
+            <img src="images/icons/bars-blue.svg" alt="Bars-blue">
+        </a>
+        <div class="welcome">
+            <a href="#" id="pop-up">
+                <span>Welcome back, John Doe!</span>
+                <img src="images/icons/default-avatar.svg" alt="Default avatar">
+                <img src="images/icons/arrow-header.svg" alt="Arrow header">
+            </a>
+            <!-- Pop-up -->
+            <div class="ui popup transition">
+                <div class="pop-up-menu">
+                    <a href="settings.html">Account Settings</a>
+                    <a href="#">Add Website</a>
+                    <a href="billing.html">Billing</a>
+                </div>
+            </div>
+            <!-- Pop-up -->
+        </div>
+    </header>
+    <div class="page">
+        <!-- Hamburger-menu -->
+        <div class="mobile-modal-menu">
+            <a class="burger" href="#">
+                <img src="images/icons/bars-white.svg" alt="White bars">
+            </a>
+            <div class="ui secondary vertical menu">
+                <a class="active item" href="server.html">Server</a>
+                <a class="item" href="deploy.html">Domain</a>
+                <a class="item">Firewall</a>
+                <a class="item" href="support.html">Support</a>
+                <a class="item">Affiliate</a>
+                <a class="item" href="billing.html">Billing</a>
+                <a class="item" href="account_settings.php">Settings</a>
+                <a class="item">Logout</a>
+            </div>
+        </div>
+        <!-- Hamburger-menu -->
+        <!-- Side-menu -->
+        <div id="side">
+            <div class="sidebar">
+                <ul>
+                    <li><a class="active" href="server.html">
+                            <img src="images/side-menu-icons/server-active.svg" alt="Active server">
+                            <span>Server</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/domain.svg" alt="Domain">
+                            <span>Domain</span></a>
+                    </li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/firewall.svg" alt="Firewall">
+                            <span>Firewall</span></a></li>
+                    <li><a href="support.html">
+                            <img src="images/side-menu-icons/support.svg" alt="Support">
+                            <span>Support</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/affilate.svg" alt="Affiliate">
+                            <span>Affiliate</span></a></li>
+                    <li><a href="billing.html">
+                            <img src="images/side-menu-icons/billing.svg" alt="Billing">
+                            <span>Billing</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side-menu -->
+        <div id="container">
+            <div>
+                <div class="center">
+                    <h2 id="center-h2">Servers</h2>
+                    <ul class="tabs">
+                        <li data-tab-id="instances" class="active"><span>Instances</span></li>
+                        <li data-tab-id="snapshots"><span>Snapshots</span></li>
+                        <li data-tab-id="iso"><span>ISO</span></li>
+                        <li data-tab-id="backups"><span>Backups</span></li>
+                        <li data-tab-id="ips"><span>Reserved IPs</span></li>
+                        <li data-tab-id="firewalls"><span>Firewalls</span></li>
+                    </ul>
+                    <!-- 1 Tab. Instances-->
+                    <div class="tabs-content active" data-tab-id="instances">
+                        <h2>Instances</h2>
+                        <table id="instances-small">
+                            <tr>
+                                <th>
+                                    <div class="ui checkbox">
+                                        <input name="instances-small-input-1" type="checkbox" id="instances-small-input-1" required>
+                                        <label for="instances-small-input-1"></label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="ui checkbox">
+                                        <input name="instances-small-input-2" type="checkbox" id="instances-small-input-2" required>
+                                        <label for="instances-small-input-2"></label>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="ui checkbox">
+                                        <input name="instances-small-input-3" type="checkbox" id="instances-small-input-3" required>
+                                        <label for="instances-small-input-3"></label>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Server</td>
+                                <td>
+                                    <div class="circle-green"></div><a href="editserver"><span>Guardoo Windows server</span></a>
+                                    <p>512 MB server | 163.231.192.161</p>
+                                </td>
+                                <td>
+                                    <div class="circle-red"></div><a href="editserver"><span>Guardoo Ubuntu server</span></a>
+                                    <p>512 MB server | 163.231.192.161</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                            </tr>
+                            <tr>
+                                <td>Location</td>
+                                <td>
+                                    <div class="pop-up-settings-germany">
+                                        <img src="images/flags/de.svg" alt="Germany">
+                                    </div>
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <p class="frankfurt">Frankfurt</p>
+                                            <h5 class="germany">Germany</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings-germany">
+                                        <img src="images/flags/de.svg" alt="Germany">
+                                    </div>
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <p class="frankfurt">Frankfurt</p>
+                                            <h5 class="germany">Germany</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CPU</td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>RAM</td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Storage</td>
+                                <td>
+                                    <p>32 GB</p>
+                                    <div class="ui green tiny progress" id="graph3">
+                                        <div class="bar"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>51 GB</p>
+                                    <div class="ui red tiny progress" id="graph4">
+                                        <div class="bar"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td>
+                                    <!-- Color Picker -->
+                                    <div class="tags-field">
+                                        <div class="tags-all1">
+                                        </div>
+                                        <div class="ui pointing dropdown icon button add-tag">
+                                            <img src="images/icons/plus.svg" alt="Plus">
+                                            <img src="images/icons/plus-dark.svg" alt="Dark plus">
+                                            <div class="menu">
+                                                <div id="grid-input1" class="ui grid">
+                                                    <div class="ui large input">
+                                                        <input type="text" id="tag-input1" name="tag-input1" required>
+                                                        <label for="tag-input1">Enter tag name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" checked="checked" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="item">
+                                                    <button class="ui primary basic button add-tag-name1">Add</button>
+                                                </div>
+                                                <div class="item">
+                                                    <button class="ui secondary basic button">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  End of the Color Picker -->
+                                </td>
+                                <td>
+                                    <!-- Color Picker -->
+                                    <div class="tags-field">
+                                        <div class="tags-all2">
+                                            <div class="tag-box">
+                                                <span class="tag-name">Forum</span>
+                                                <img class="close" src="images/icons/close.svg" alt="Close">
+                                            </div>
+                                            <div class="tag-box">
+                                                <span class="tag-name">Wordpress</span>
+                                                <img class="close" src="images/icons/close.svg" alt="Close">
+                                            </div>
+                                        </div>
+                                        <div class="ui pointing dropdown icon button add-tag">
+                                            <img src="images/icons/plus.svg" alt="Plus">
+                                            <img src="images/icons/plus-dark.svg" alt="Dark plus">
+                                            <div class="menu">
+                                                <div id="grid-input2" class="ui grid">
+                                                    <div class="ui large input">
+                                                        <input type="text" id="tag-input2" name="tag-input2" required>
+                                                        <label for="tag-input2">Enter tag name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" checked="checked" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="item">
+                                                    <button class="ui primary basic button add-tag-name2">Add</button>
+                                                </div>
+                                                <div class="item">
+                                                    <button class="ui secondary basic button">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  End of the Color Picker -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="instances">
+                            <tr>
+                                <th>
+                                    <div class="ui checkbox">
+                                        <input name="instances-input-1" type="checkbox" id="instances-input-1" required>
+                                        <label for="instances-input-1"></label>
+                                    </div>
+                                </th>
+                                <th>Server</th>
+                                <th>OS</th>
+                                <th>Location</th>
+                                <th>CPU</th>
+                                <th>RAM</th>
+                                <th>Storage</th>
+                                <th>Tags</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ui checkbox">
+                                        <input name="instances-input-2" type="checkbox" id="instances-input-2" required>
+                                        <label for="instances-input-2"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="circle-green"></div><a href="editserver"><span>Guardoo Windows server</span></a>
+                                    <p>512 MB server | 163.231.192.161</p>
+                                </td>
+                                <td>
+                                    <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings-germany">
+                                        <img src="images/flags/de.svg" alt="Germany">
+                                    </div>
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <p class="frankfurt">Frankfurt</p>
+                                            <h5 class="germany">Germany</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                                <td>
+                                    <p>32 GB</p>
+                                    <div class="ui green tiny progress" id="graph1">
+                                        <div class="bar"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Color Picker -->
+                                    <div class="tags-field">
+                                        <div class="tags-all3">
+                                        </div>
+                                        <div class="ui pointing dropdown icon button add-tag">
+                                            <img src="images/icons/plus.svg" alt="Plus">
+                                            <img src="images/icons/plus-dark.svg" alt="Dark plus">
+                                            <div class="menu">
+                                                <div id="grid-input3" class="ui grid">
+                                                    <div class="ui large input">
+                                                        <input type="text" id="tag-input3" name="tag-input3" required>
+                                                        <label for="tag-input3">Enter tag name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" checked="checked" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="item">
+                                                    <button class="ui primary basic button add-tag-name3">Add</button>
+                                                </div>
+                                                <div class="item">
+                                                    <button class="ui secondary basic button">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  End of the Color Picker -->
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ui checkbox">
+                                        <input name="instances-input-3" type="checkbox" id="instances-input-3" required>
+                                        <label for="instances-input-3"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="circle-red"></div><a href="editserver"><span>Guardoo Ubuntu server</span></a>
+                                    <p>512 MB server | 163.231.192.161</p>
+                                </td>
+                                <td>
+                                    <img src="images/icons/linux.svg" alt="Linux">
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings-germany">
+                                        <img src="images/flags/de.svg" alt="Germany">
+                                    </div>
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <p class="frankfurt">Frankfurt</p>
+                                            <h5 class="germany">Germany</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                                <td>
+                                    <p>62%</p><img src="images/graphs/graph.png" alt="Graph">
+                                </td>
+                                <td>
+                                    <p>51 GB</p>
+                                    <div class="ui red tiny progress" id="graph2">
+                                        <div class="bar"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Color Picker -->
+                                    <div class="tags-field">
+                                        <div class="tags-all4">
+                                            <div class="tag-box">
+                                                <span class="tag-name">Forum</span>
+                                                <img class="close" src="images/icons/close.svg" alt="Close">
+                                            </div>
+                                            <div class="tag-box">
+                                                <span class="tag-name">Wordpress</span>
+                                                <img class="close" src="images/icons/close.svg" alt="Close">
+                                            </div>
+                                        </div>
+                                        <div class="ui pointing dropdown icon button add-tag">
+                                            <img src="images/icons/plus.svg" alt="Plus">
+                                            <img src="images/icons/plus-dark.svg" alt="Dark plus">
+                                            <div class="menu">
+                                                <div id="grid-input4" class="ui grid">
+                                                    <div class="ui large input">
+                                                        <input type="text" id="tag-input4" name="tag-input4" required>
+                                                        <label for="tag-input4">Enter tag name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" checked="checked" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="item">
+                                                    <button class="ui primary basic button add-tag-name4">Add</button>
+                                                </div>
+                                                <div class="item">
+                                                    <button class="ui secondary basic button">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  End of the Color Picker -->
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="button">
+                            <a href="deploy">
+                                <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                <span>Add new Server</span>
+                            </a>
+                        </div>
+                        <div id="instances-footer-button">
+                            <a href="#">Restart</a>
+                            <a href="#">Stop</a>
+                        </div>
+                    </div>
+                    <!--End of the 1 Tab. Instances-->
+                    <!-- 2 Tab. Snapshots-->
+                    <div class="tabs-content" data-tab-id="snapshots">
+                        <h2>Snapshots</h2>
+                        <table class="snapshots-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15GB</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>2017-02-01</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="snapshots-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15GB</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>2017-02-01</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="snapshots-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15GB</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>2017-02-01</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="snapshots">
+                            <tr>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>OS</th>
+                                <th>Size</th>
+                                <th>Cost</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15GB</td>
+                                <td>-</td>
+                                <td>2017-02-01</td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                                <td>15GB</td>
+                                <td>-</td>
+                                <td>2017-02-01</td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15GB</td>
+                                <td>-</td>
+                                <td>2017-02-01</td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="button">
+                            <a id="snapshot-click">
+                                <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                <span>Add new Snapshot</span></a>
+                        </div>
+                        <div id="snapshot-add">
+                            <h1>Add Snapshot</h1>
+                            <h3>Take a snapshot of an active server</h3>
+                            <div class="ui grid">
+                                <div class="ui large input">
+                                    <input type="text" id="snapshot-name" name="snapshot-name" required>
+                                    <label for="snapshot-name">Name</label>
+                                </div>
+                            </div>
+                            <div class="ui grid snapshot-two-fields">
+                                <div class="ui large input">
+                                    <input type="text" id="snapshot-label" name="snapshot-label" required>
+                                    <label for="snapshot-label">Label</label>
+                                </div>
+                                <div id="take-snapshot">Take Snapshot</div>
+                            </div>
+                            <ul>
+                                <li>- Stored snapshots are currently <b>free</b> - pricing subject to change.</li>
+                                <li>- <b>We recommend</b> changing each machine to use DHCP for networking.</li>
+                                <li>- Snapshots can only be restored to equal or bigger disks. If there is a single partition, it will be <b>automatically expanded.</b></li>
+                            </ul>
+                            <h3>Upload snapshot from remote machine</h3>
+                            <ul>
+                                <li>- Snapshot must be in <b>RAW format</b> (no VMDK, QCOW2, etc).</li>
+                                <li>- Maximum uploaded snapshot size is <b>150 GB.</b></li>
+                                <li>- Snapshot must support <b>VirtIO Ethernet/Disk Controllers.</b></li>
+                            </ul>
+                            <div class="ui grid" id="grid-snapshot-remote">
+                                <div class="ui large input">
+                                    <input type="text" id="snapshot-remote" name="snapshot-remote" required>
+                                    <label for="snapshot-remote">Remote URL (http and https URLs are permitted)</label>
+                                </div>
+                            </div>
+                            <div id="snapshot-upload">Upload</div>
+                        </div>
+                    </div>
+                    <!--End of the 2 Tab. Snapshots-->
+                    <!-- 3 Tab. ISO-->
+                    <div class="tabs-content" data-tab-id="iso">
+                        <h2 id="iso-header">ISO</h2>
+                        <table class="iso-small">
+                            <tr>
+                                <td>Name</td>
+                                <td>livedvd-x86-amd64-32ul</td>
+                            </tr>
+                            <tr>
+                                <td>MD5</td>
+                                <td>d3984kdjfn30kdfmlvm</td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>1.4GB</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>
+                                    <p>30 GB</p>
+                                    <div class="ui green tiny progress iso-graph">
+                                        <div class="bar"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="iso-small">
+                            <tr>
+                                <td>Name</td>
+                                <td>livedvd-x86-amd64-32ul</td>
+                            </tr>
+                            <tr>
+                                <td>MD5</td>
+                                <td>d3984kdjfn30kdfmlvm</td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>1.4GB</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>
+                                    <div class="circle-green"></div><span>Available</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="iso-small">
+                            <tr>
+                                <td>Name</td>
+                                <td>livedvd-x86-amd64-32ul</td>
+                            </tr>
+                            <tr>
+                                <td>MD5</td>
+                                <td>d3984kdjfn30kdfmlvm</td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>1.4GB</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>
+                                    <div class="circle-green"></div><span>Available</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="iso">
+                            <tr>
+                                <th>Name</th>
+                                <th>MD5</th>
+                                <th>Size</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>livedvd-x86-amd64-32ul</td>
+                                <td>d3984kdjfn30kdfmlvm</td>
+                                <td>1.4GB</td>
+                                <td>
+                                    <p>30 GB</p>
+                                    <div class="ui green tiny progress iso-graph">
+                                        <div class="bar"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>livedvd-x86-amd64-32ul</td>
+                                <td>d3984kdjfn30kdfmlvm</td>
+                                <td>1.4GB</td>
+                                <td>
+                                    <div class="circle-green"></div><span>Available</span>
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>livedvd-x86-amd64-32ul</td>
+                                <td>d3984kdjfn30kdfmlvm</td>
+                                <td>1.4GB</td>
+                                <td>
+                                    <div class="circle-green"></div><span>Available</span>
+                                </td>
+                                <td>
+                                    <div class="pop-up-settings">
+                                        <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <!-- Pop-up -->
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <a href="#">New</a>
+                                            <a href="#">New1</a>
+                                            <a href="#">New2</a>
+                                        </div>
+                                    </div>
+                                    <!-- Pop-up -->
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="button">
+                            <a href="#">
+                                <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                <span>Add new ISO</span></a>
+                        </div>
+                    </div>
+                    <!--End of the 3 Tab. ISO-->
+                    <!--4 Tab. Backups-->
+                    <div class="tabs-content" data-tab-id="backups">
+                        <h2 id="backup-h2">Backup</h2>
+                        <table class="backup-history-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15Gb</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>Expired in 3 days</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="backup-history-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15Gb</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>Expired in 3 days</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="backup-history-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15Gb</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>Expired in 3 days</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="backup-history">
+                            <tr>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>OS</th>
+                                <th>Size</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15Gb</td>
+                                <td>Expired in 3 days</td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                                <td>15Gb</td>
+                                <td>Expired in 3 days</td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15Gb</td>
+                                <td>Expired in 3 days</td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--End of the 4 Tab. Backups-->
+                    <!--5 Tab. Reserved IPs-->
+                    <div class="tabs-content" data-tab-id="ips">
+                        <h2>Reserved IPs</h2>
+                        <table id="reserved">
+                            <tr>
+                                <th>Reserved IP</th>
+                                <th>Location</th>
+                                <th>Attached to</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td><span>193.142.91.191</span></td>
+                                <td>
+                                    <div class="pop-up-settings-germany">
+                                        <img src="images/flags/de.svg" alt="Germany">
+                                    </div>
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <p class="frankfurt">Frankfurt</p>
+                                            <h5 class="germany">Germany</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"><span>Ubuntu Server 1</span></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/edit.svg" alt="Edit">
+                                        <img src="images/icons/edit-blue.svg" alt="Blue edit">
+                                    </span>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>213.142.91.191</td>
+                                <td>
+                                    <div class="pop-up-settings-germany">
+                                        <img src="images/flags/de.svg" alt="Germany">
+                                    </div>
+                                    <div class="ui popup transition">
+                                        <div class="pop-up-menu">
+                                            <p class="frankfurt">Frankfurt</p>
+                                            <h5 class="germany">Germany</h5>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"><span>Fedora Server</span></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/edit.svg" alt="Edit">
+                                        <img src="images/icons/edit-blue.svg" alt="Blue edit">
+                                    </span>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="button">
+                            <a href="#">
+                                <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                <span>Add new Reserved IP</span></a>
+                        </div>
+                        <h3>Reserved IPs info</h3>
+                        <p>
+                            In the file you put in /etc/init.d/ you have <b>to set it executable</b> with: <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br><br>
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and<br> scrambled it to make a type specimen book. <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <!--End of the 5 Tab. Reserved IPs-->
+                    <!--6 Tab. Firewalls-->
+                    <div class="tabs-content" data-tab-id="firewalls">
+                        <div id="ddos">
+                            <h2>Firewalls</h2>
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Rules</th>
+                                    <th>Date created</th>
+                                    <th>Sources</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/icons/shield.svg" alt="Shield"> SSH Rules</td>
+                                    <td>2</td>
+                                    <td>2017-06-24 11:23:51</td>
+                                    <td>IPv4</td>
+                                    <td>
+                                        <div class="pop-up-settings">
+                                            <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                        </div>
+                                        <!-- Pop-up -->
+                                        <div class="ui popup transition">
+                                            <div class="pop-up-menu">
+                                                <a href="#">New</a>
+                                                <a href="#">New1</a>
+                                                <a href="#">New2</a>
+                                            </div>
+                                        </div>
+                                        <!-- Pop-up -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/icons/shield.svg" alt="Shield"> Default firewall 2</td>
+                                    <td>6</td>
+                                    <td>2017-06-24 11:23:51</td>
+                                    <td>IPv4, IPv6</td>
+                                    <td>
+                                        <div class="pop-up-settings">
+                                            <img src="images/icons/cogwheel.svg" alt="Cogwheel">
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                        </div>
+                                        <!-- Pop-up -->
+                                        <div class="ui popup transition">
+                                            <div class="pop-up-menu">
+                                                <a href="#">New</a>
+                                                <a href="#">New1</a>
+                                                <a href="#">New2</a>
+                                            </div>
+                                        </div>
+                                        <!-- Pop-up -->
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="button">
+                                <a>
+                                    <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                    <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                    <span>Add new Firewall</span></a>
+                            </div>
+                            <div id="firewall">
+                                <a href="server">
+                                    <img src="images/icons/arrow-left.svg" alt="Left arrow">
+                                    Back to Firewalls</a>
+                                <h2>Create Firewall</h2>
+                                <h4>Choose a name</h4>
+                                <div class="ui grid">
+                                    <div class="ui large fluid input">
+                                        <input type="text" id="firewall-input-name" name="firewall-input-name" required>
+                                        <label for="firewall-input-name">Name</label>
+                                    </div>
+                                </div>
+                                <h3>Inbound Rules</h3>
+                                <div class="rules">
+                                    <h5>Protocol</h5>
+                                    <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                        <div class="text">SSH</div>
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                        <div class="menu">
+                                            <div class="item">SSH</div>
+                                            <div class="item">HTTP</div>
+                                            <div class="item">HTTPS</div>
+                                            <div class="item">MySQL</div>
+                                            <div class="item">PostgreSQL</div>
+                                            <div class="item">DNS (UDP)</div>
+                                            <div class="item">DNS (TCP)</div>
+                                            <div class="item">MS RDP</div>
+                                        </div>
+                                    </div>
+                                    <h5>Port range</h5>
+                                    <div class="ui grid">
+                                        <div class="ui large fluid input">
+                                            <input type="number" id="firewall-input-22-1" name="firewall-input-22-1" required placeholder="22" oninput="func(this)" step="0.01" onkeyup="onlyNumbers(this)">
+                                        </div>
+                                    </div>
+                                    <h5>Sources</h5>
+                                    <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                        <div class="text">
+                                            <div class="tags">
+                                                <a href="#"><span>IPv4</span>
+                                                    <span>
+                                                        <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                        <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                    </span>
+                                                </a>
+                                                <a href="#"><span>IPv6</span>
+                                                    <span>
+                                                        <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                        <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                    </span>
+                                                </a>
+                                                <a href="#"><span>
+                                                        <img src="images/icons/ubuntu-black.svg" alt="Black ubuntu">
+                                                        Ubuntu server #3</span>
+                                                    <span>
+                                                        <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                        <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                        <span class="trashes">
+                                            <img class="trash" src="images/icons/trash.svg" alt="Trash">
+                                            <img class="trash" src="images/icons/trash-red.svg" alt="Red trash">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1"></div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th>Protocol</th>
+                                        <th>Port range</th>
+                                        <th>Sources</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                                <div class="text">SSH</div>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <div class="menu">
+                                                    <div class="item">SSH</div>
+                                                    <div class="item">HTTP</div>
+                                                    <div class="item">HTTPS</div>
+                                                    <div class="item">MySQL</div>
+                                                    <div class="item">PostgreSQL</div>
+                                                    <div class="item">DNS (UDP)</div>
+                                                    <div class="item">DNS (TCP)</div>
+                                                    <div class="item">MS RDP</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ui grid">
+                                                <div class="ui large fluid input">
+                                                    <input type="number" id="firewall-input-22-2" name="firewall-input-22-2" required placeholder="22" oninput="func(this)" step="0.01" onkeyup="onlyNumbers(this)">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                                <div class="text">
+                                                    <div class="tags">
+                                                        <a href="#"><span>IPv4</span>
+                                                            <span>
+                                                                <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                                <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                            </span>
+                                                        </a>
+                                                        <a href="#"><span>IPv6</span>
+                                                            <span>
+                                                                <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                                <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                            </span>
+                                                        </a>
+                                                        <a href="#"><span>
+                                                                <img src="images/icons/ubuntu-black.svg" alt="Black ubuntu">
+                                                                Ubuntu server #3</span>
+                                                            <span>
+                                                                <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                                <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <div class="menu transition hidden" tabindex="-1"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <img src="images/icons/trash.svg" alt="Trash">
+                                                <img src="images/icons/trash-red.svg" alt="Red trash">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <h3>Outbound Rules</h3>
+                                <div class="rules">
+                                    <h5>Protocol</h5>
+                                    <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                        <div class="text">TCP</div>
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                        <div class="menu">
+                                            <div class="item">SSH</div>
+                                            <div class="item">HTTP</div>
+                                            <div class="item">HTTPS</div>
+                                            <div class="item">MySQL</div>
+                                            <div class="item">PostgreSQL</div>
+                                            <div class="item">DNS (UDP)</div>
+                                            <div class="item">DNS (TCP)</div>
+                                            <div class="item">MS RDP</div>
+                                        </div>
+                                    </div>
+                                    <h5>Port range</h5>
+                                    <div class="ui grid">
+                                        <div class="ui large fluid input">
+                                            <input type="number" id="firewall-input-all-1" name="firewall-input-all-1" required placeholder="all" oninput="func(this)" step="0.01" onkeyup="onlyNumbers(this)">
+                                        </div>
+                                    </div>
+                                    <h5>Sources</h5>
+                                    <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                        <div class="text">
+                                            <div class="tags">
+                                                <a href="#"><span>IPv4</span>
+                                                    <span>
+                                                        <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                        <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                    </span>
+                                                </a>
+                                                <a href="#"><span>IPv6</span>
+                                                    <span>
+                                                        <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                        <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                        <span class="trashes">
+                                            <img src="images/icons/trash.svg" alt="Trash">
+                                            <img src="images/icons/trash-red.svg" alt="Red trash">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1"></div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th>Protocol</th>
+                                        <th>Port range</th>
+                                        <th>Sources</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                                <div class="text">TCP</div>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <div id="tt" class="menu">
+                                                    <div class="item">SSH</div>
+                                                    <div class="item">HTTP</div>
+                                                    <div class="item">HTTPS</div>
+                                                    <div class="item">MySQL</div>
+                                                    <div class="item">PostgreSQL</div>
+                                                    <div class="item">DNS (UDP)</div>
+                                                    <div class="item">DNS (TCP)</div>
+                                                    <div class="item">MS RDP</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ui grid">
+                                                <div class="ui large fluid input">
+                                                    <input type="number" id="firewall-input-all-2" name="firewall-input-all-2" required placeholder="all" oninput="func(this)" step="0.01" onkeyup="onlyNumbers(this)">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="ui fluid selection large dropdown profile-dropdown one-time-password" tabindex="0">
+                                                <div class="text">
+                                                    <div class="tags">
+                                                        <a href="#"><span>IPv4</span>
+                                                            <span>
+                                                                <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                                <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                            </span>
+                                                        </a>
+                                                        <a href="#"><span>IPv6</span>
+                                                            <span>
+                                                                <img class="close-gray" src="images/icons/close-gray.svg" alt="Gray close">
+                                                                <img class="close-dark" src="images/icons/close-dark.svg" alt="Dark close">
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <div class="menu transition hidden" tabindex="-1"></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span>
+                                                <img src="images/icons/trash.svg" alt="Trash">
+                                                <img src="images/icons/trash-red.svg" alt="Red trash">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <a href="#" class="button">
+                                    <p>Create Firewall</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of the 6 Tab-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="page description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2980B9">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2980B9">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2980B9">
+    <title>Settings</title>
+    <link rel="icon" type="image/png" href="/path/favicon.png" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/path/favicon.ico" /><![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/rawline.css" rel="stylesheet">
+    <link href="css/semantic.min.css" rel="stylesheet">
+    <link href="css/jquery.scrollbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/asScrollbar.css" type="text/css">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="images/icons/logo.svg" alt="Logo"></a>
+        <a class="click" href="#">
+            <img src="images/icons/bars-blue.svg" alt="Blue bars">
+        </a>
+        <div class="welcome">
+            <a href="#" id="pop-up">
+                <span>Welcome back, John Doe!</span>
+                <img src="images/icons/default-avatar.svg" alt="Default avatar">
+                <img src="images/icons/arrow-header.svg" alt="Header arrow">
+            </a>
+            <!-- Pop-up -->
+            <div class="ui popup transition">
+                <div class="pop-up-menu">
+                    <a href="settings.html">Account Settings</a>
+                    <a href="#">Add Website</a>
+                    <a href="billing.html">Billing</a>
+                </div>
+            </div>
+            <!-- Pop-up -->
+        </div>
+    </header>
+    <div class="page">
+        <!-- Hamburger-menu -->
+        <div class="mobile-modal-menu">
+            <a class="burger" href="#">
+                <img src="images/icons/bars-white.svg" alt="White bars">
+            </a>
+            <div class="ui secondary vertical menu">
+                <a class="active item" href="server.html">Server</a>
+                <a class="item" href="deploy.html">Domain</a>
+                <a class="item">Firewall</a>
+                <a class="item" href="support.html">Support</a>
+                <a class="item">Affiliate</a>
+                <a class="item" href="billing.html">Billing</a>
+                <a class="item" href="account_settings.php">Settings</a>
+                <a class="item">Logout</a>
+            </div>
+        </div>
+        <!-- Hamburger-menu -->
+        <!-- Side-menu -->
+        <div id="side">
+            <div class="sidebar">
+                <ul>
+                    <li><a class="active" href="#">
+                            <img src="images/side-menu-icons/server-active.svg" alt="Active server">
+                            <span>Server</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/domain.svg" alt="Domain">
+                            <span>Domain</span></a>
+                    </li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/firewall.svg" alt="Firewall">
+                            <span>Firewall</span></a></li>
+                    <li><a href="support.html">
+                            <img src="images/side-menu-icons/support.svg" alt="Support">
+                            <span>Support</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/affilate.svg" alt="Affiliate">
+                            <span>Affiliate</span></a></li>
+                    <li><a href="billing.html">
+                            <img src="images/side-menu-icons/billing.svg" alt="Billing">
+                            <span>Billing</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side-menu -->
+        <div id="container">
+            <div>
+                <div class="center">
+                    <h2>Create New Instance</h2>
+                    <ul class="tabs">
+                        <li data-tab-id="personal" class="active"><span>Personal Information</span></li>
+                        <li data-tab-id="verification"><span>Verification</span></li>
+                        <li data-tab-id="interface"><span>Interface</span></li>
+                    </ul>
+                    <!-- 1 Tab. Profile-->
+                    <div class="tabs-content active" data-tab-id="personal">
+                        <div id="settings">
+                            <h2>Your details</h2>
+                            <div class="ui grid payment-postal">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-first-name" name="settings-first-name" required>
+                                    <label for="settings-first-name">First Name</label>
+                                </div>
+                                <div class="ui large input">
+                                    <input type="text" id="settings-last-name" name="settings-last-name" required>
+                                    <label for="settings-last-name">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="ui grid">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-email" name="settings-email" required>
+                                    <label for="settings-email">Email</label>
+                                </div>
+                            </div>
+                            <div class="ui grid">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-recovery-email" name="settings-recovery-email" required>
+                                    <label for="settings-recovery-email">Recovery Email</label>
+                                </div>
+                            </div>
+                            <div class="ui grid">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-current-password" name="settings-current-password" required>
+                                    <label for="settings-current-password">Current Password</label>
+                                </div>
+                            </div>
+                            <div id="save-new-password">
+                                <div class="ui grid">
+                                    <div class="ui large input">
+                                        <input type="text" id="settings-new-password" name="settings-new-password" required>
+                                        <label for="settings-new-password">New Password</label>
+                                    </div>
+                                </div>
+                                <div class="ui grid">
+                                    <div class="ui large input">
+                                        <input type="text" id="settings-confirm-new-password" name="settings-confirm-new-password" required>
+                                        <label for="settings-confirm-new-password">Confirm New Password</label>
+                                    </div>
+                                </div>
+                                <div class="settings-button">Save New Password</div>
+                            </div>
+                            <div id="change-password" class="settings-button">Change Password</div>
+                            <div id="two-factor-click" class="settings-button">Manage Two Factor Auth</div>
+                            <div id="two-factor">
+                                <div id="boot" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">Time-based HMAC on time password</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">Time-based HMAC on time password</div>
+                                        <div class="item">Time-based HMAC on time password</div>
+                                        <div class="item">Time-based HMAC on time password</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="left-column">
+                                        <div class="ui grid">
+                                            <div class="ui large input">
+                                                <input type="text" id="settings-secret-password" name="settings-secret-password" required>
+                                                <label for="settings-secret-password">Secret Key:<b> DKFFHFKLSPKFKKK33K3K33K</b></label>
+                                            </div>
+                                        </div>
+                                        <div class="ui grid">
+                                            <div class="ui large input">
+                                                <input type="text" id="one-time-password" name="one-time-password" required>
+                                                <label for="one-time-password">One-time Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="settings-button">Save</div>
+                                    </div>
+                                    <div id="qr-image">
+                                        <img src="images/others/qr-code.svg" alt="QR-code">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui grid">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-adress" name="settings-adress" required>
+                                    <label for="settings-adress">Adress</label>
+                                </div>
+                            </div>
+                            <div class="ui grid">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-adress-2" name="settings-adress-2" required>
+                                    <label for="settings-adress-2">Adress (line 2)</label>
+                                </div>
+                            </div>
+                            <div class="ui grid settings-three-inputs">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-city" name="settings-city" required>
+                                    <label for="settings-city">City</label>
+                                </div>
+                                <div class="ui large input">
+                                    <input type="text" id="settings-zip-code" name="settings-zip-code" required>
+                                    <label for="settings-zip-code">ZIP Code</label>
+                                </div>
+                                <div class="ui large input">
+                                    <input type="text" id="settings-state" name="settings-state" required>
+                                    <label for="settings-state">State</label>
+                                </div>
+                            </div>
+                            <div class="ui grid settings-three-inputs">
+                                <div class="ui large input">
+                                    <input type="text" id="country-city" name="country-city" required>
+                                    <label for="country-city">Country</label>
+                                </div>
+                                <div id="usd-eur">
+                                    <div class="active-usd-eur">USD</div>
+                                    <div>EUR</div>
+                                </div>
+                                <div id="timezone" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">Timezone</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">Timezone</div>
+                                        <div class="item">Timezone</div>
+                                        <div class="item">Timezone</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui grid payment-postal">
+                                <div class="ui large input">
+                                    <input type="text" id="settings-company" name="settings-company" required>
+                                    <label for="settings-company">Company</label>
+                                </div>
+                                <div class="ui large input">
+                                    <span id="eu-companies">*For EU Companies only</span>
+                                    <input type="text" id="settings-vat" name="settings-vat" required>
+                                    <label for="settings-vat">VAT Number</label>
+                                </div>
+                            </div>
+                            <div class="settings-button">Update Details</div>
+                            <div id="desactivate">Desactivate Account</div>
+                        </div>
+                    </div>
+                    <!--End of the 1 Tab. Profile-->
+                    <!-- 2 Tab. Verification-->
+                    <div class="tabs-content" data-tab-id="verification">
+                        <div id="verification">
+                            <ul class="verification-block">
+                                <li class="active"><span>Personal</span></li>
+                                <li><span>Financial</span></li>
+                                <li><span>Social</span></li>
+                            </ul>
+                            <!-- 1 Slide Tab. Personal -->
+                            <div class="verification-block-content active">
+                                <h2>Secure your account</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div id="civic">
+                                    <img src="images/icons/civic.svg" alt="Civic">
+                                    Verify with Civic
+                                </div>
+                                <div id="verification-two-card">
+                                    <div>
+                                        <img src="images/icons/apple.svg" alt="Apple">
+                                        <span>Download on the</span>
+                                        <span>App Store</span>
+                                    </div>
+                                    <div>
+                                        <img src="images/icons/googleplay.svg" alt="Googleplay">
+                                        <span>GET IT ON</span>
+                                        <span>Google Play</span>
+                                    </div>
+                                </div>
+                                <div id="alternative">
+                                    <span class="alternative-arrow"></span>
+                                    Use alternative verification method
+                                </div>
+                                <div id="alternative-block">
+                                    <h3>Email Address</h3>
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed">Verified</div>
+                                    </div>
+                                    <div class="ui grid">
+                                        <div class="ui large input">
+                                            <span id="change-email">*Change email in your profile</span>
+                                            <input type="text" id="rick-and-morty" name="rick-and-morty" required>
+                                            <label for="rick-and-morty">rick.and.morty@gmail.com</label>
+                                        </div>
+                                    </div>
+                                    <p>A verification email has been sent.</p>
+                                    <div class="confirm">Confirm</div>
+                                    <h3>Phone Number</h3>
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue">Verify</div>
+                                    </div>
+                                    <div id="phone-block">
+                                        <textarea id="number" placeholder="(222) 576-45-55"></textarea>
+                                        <div class="ui pointing dropdown" id="number-flag">
+                                            <input name="gender" type="hidden">
+                                            <div class="default text">
+                                                <img src="images/flags/fr.svg" alt="France">
+                                            </div>
+                                            <div class="menu">
+                                                <div class="item" data-text="<img src='images/flags/de.svg' alt='Germany'>">
+                                                    <img src='images/flags/de.svg' alt="Germany">
+                                                    DE
+                                                </div>
+                                                <div class="item" data-text="<img src='images/flags/dk.svg' alt='Denmark'>">
+                                                    <img src='images/flags/dk.svg' alt="Denmark">
+                                                    DK
+                                                </div>
+                                                <div class="item" data-text="<img src='images/flags/lt.svg' alt='Lithuania'>">
+                                                    <img src='images/flags/lt.svg' alt="Lithuania">
+                                                    LT
+                                                </div>
+                                                <div class="item" data-text="<img src='images/flags/it.svg' alt='Italy'>">
+                                                    <img src='images/flags/it.svg' alt='Italy'>
+                                                    IT
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="images/icons/arrow.svg" alt="Arrow">
+                                    </div>
+                                    <p>A verification email has been sent.</p>
+                                    <div class="ui grid">
+                                        <div class="ui large input">
+                                            <input type="text" id="enter-code" name="enter-code" required>
+                                            <label for="enter-code">Please enter the code</label>
+                                        </div>
+                                    </div>
+                                    <div class="confirm">Confirm</div>
+                                </div>
+                            </div>
+                            <!--End of the 1 Slide Tab. Personal -->
+                            <!-- 2 Slide Tab. Financial -->
+                            <div class="verification-block-content">
+                                <h2>Add a verified payment method</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="payment-method credit-card">
+                                    <h4><img src="images/icons/credit-card.svg" alt="Credit card">Credit or Debit Card</h4>
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue verifed-click">Verify</div>
+                                    </div>
+                                </div>
+                                <div class="amount-block">
+                                    <p>A small amount up to <b>$2</b> will be charged from your Credit or Debit Card.</p>
+                                    <div class="ui grid two-inputs">
+                                        <div class="ui input">
+                                            <input type="text" id="enter-amount1" name="enter-amount1" required>
+                                            <label for="enter-amount1">Enter the amount</label>
+                                        </div>
+                                        <div class="confirm">Confirm</div>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <img src="images/icons/paypal.svg" alt="Paypal">
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue verifed-click">Verify</div>
+                                    </div>
+                                </div>
+                                <div class="amount-block">
+                                    <p>A small amount up to <b>$2</b> will be charged from your Credit or Debit Card.</p>
+                                    <div class="ui grid two-inputs">
+                                        <div class="ui input">
+                                            <input type="text" id="enter-amount2" name="enter-amount2" required>
+                                            <label for="enter-amount2">Enter the amount</label>
+                                        </div>
+                                        <div class="confirm">Confirm</div>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <img src="images/icons/skrill.svg" alt="Skrill">
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue verifed-click">Verify</div>
+                                    </div>
+                                </div>
+                                <div class="amount-block">
+                                    <p>A small amount up to <b>$2</b> will be charged from your Credit or Debit Card.</p>
+                                    <div class="ui grid two-inputs">
+                                        <div class="ui input">
+                                            <input type="text" id="enter-amount3" name="enter-amount3" required>
+                                            <label for="enter-amount3">Enter the amount</label>
+                                        </div>
+                                        <div class="confirm">Confirm</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End of the 2 Slide Tab. Financial -->
+                            <!-- 3 Slide Tab. Social -->
+                            <div class="verification-block-content">
+                                <h2>Social Verification</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="payment-method social-tab">
+                                    <img src="images/social/vk-social.svg" alt="Social VK">
+                                    <span>VKontakte</span>
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue link-click">Link</div>
+                                    </div>
+                                </div>
+                                <div class="payment-method social-tab">
+                                    <img src="images/social/facebook-social.svg" alt="Social Facebook">
+                                    <span>Facebook</span>
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue link-click">Link</div>
+                                    </div>
+                                </div>
+                                <div class="payment-method social-tab">
+                                    <img src="images/social/linkedin-social.svg" alt="Social LinkedIn">
+                                    <span>LinkedIn</span>
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue link-click">Link</div>
+                                    </div>
+                                </div>
+                                <div class="payment-method social-tab">
+                                    <img src="images/social/google-plus-social.svg" alt="Social GooglePlus">
+                                    <span>Google Plus</span>
+                                    <div class="xp-verifed">
+                                        <div class="xp">+10 xp</div>
+                                        <div class="verifed blue link-click">Link</div>
+                                    </div>
+                                </div>
+                                <div id="social-more-click">
+                                    <span class="alternative-arrow"></span>
+                                    More
+                                </div>
+                                <div id="social-more">
+                                    <div class="payment-method social-tab">
+                                        <img src="images/social/youtube-social.svg" alt="Social Youtube">
+                                        <span>Youtube</span>
+                                        <div class="xp-verifed">
+                                            <div class="xp">+10 xp</div>
+                                            <div class="verifed blue link-click">Link</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method social-tab">
+                                        <img src="images/social/github-social.svg" alt="Social GitHub">
+                                        <span>GitHub</span>
+                                        <div class="xp-verifed">
+                                            <div class="xp">+10 xp</div>
+                                            <div class="verifed blue link-click">Link</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method social-tab">
+                                        <img src="images/social/instagram-social.svg" alt="Social Instagram">
+                                        <span>Instagram</span>
+                                        <div class="xp-verifed">
+                                            <div class="xp">+10 xp</div>
+                                            <div class="verifed blue link-click">Link</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method social-tab">
+                                        <img src="images/social/xing-social.svg" alt="Social Xing">
+                                        <span>Xing</span>
+                                        <div class="xp-verifed">
+                                            <div class="xp">+10 xp</div>
+                                            <div class="verifed blue link-click">Link</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method social-tab">
+                                        <img src="images/social/slack-social.svg" alt="Social Slack">
+                                        <span>Slack</span>
+                                        <div class="xp-verifed">
+                                            <div class="xp">+10 xp</div>
+                                            <div class="verifed blue link-click">Link</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method social-tab">
+                                        <img src="images/social/telegram-social.svg" alt="Social Telegram">
+                                        <span>Telegram</span>
+                                        <div class="xp-verifed">
+                                            <div class="xp">+10 xp</div>
+                                            <div class="verifed blue link-click">Link</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method social-tab">
+                                        <img src="images/social/twitter-social.svg" alt="Social Twitter">
+                                        <span>Twitter</span>
+                                        <div class="xp-verifed">
+                                            <div class="xp">+10 xp</div>
+                                            <div class="verifed blue link-click">Link</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End of the 3 Slide Tab. Social -->
+                        </div>
+                    </div>
+                    <!--End of the 2 Tab. Verification-->
+                    <!-- 3 Tab. Interface-->
+                    <div class="tabs-content" data-tab-id="interface">
+                        <div id="interface">
+                            <h2>Interface Language</h2>
+                            <p>To make your Experience more pleasant, feel free to choose your preferred language below. If you don't see your language it in the list, please consider contributing a Translation to our community at translate.guardoo.com and help others like you to get the most out of Guardoo. For your Contribution we'll honor you in our "Hall of Fame" and you'll receive a profile badge.</p>
+                            <div id="language" class="ui fluid selection dropdown" tabindex="0">
+                                <div class="text"><img src="images/flags/fr.svg" alt="France">French</div>
+                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                <div class="menu transition hidden" tabindex="-1">
+                                    <div class="item"><img src="images/flags/fr.svg" alt="France">French</div>
+                                    <div class="item"><img src="images/flags/de.svg" alt="Germany">German</div>
+                                    <div class="item"><img src="images/flags/dk.svg" alt="Denmark">Danish</div>
+                                    <div class="item"><img src="images/flags/lt.svg" alt="Lithuania">Lithuanian</div>
+                                    <div class="item"><img src="images/flags/it.svg" alt="Italy">Italian</div>
+                                    <div class="item"><img src="images/flags/ca.svg" alt="Canada">Canadian</div>
+                                    <div class="item"><img src="images/flags/is.svg" alt="Iceland">Icelandic</div>
+                                    <div class="item"><img src="images/flags/by.svg" alt="Belarus">Belarusian</div>
+                                    <div class="item"><img src="images/flags/se.svg" alt="Sweden">Swedish</div>
+                                    <div class="item"><img src="images/flags/lv.svg" alt="Latvia">Latvian</div>
+                                    <div class="item"><img src="images/flags/ua.svg" alt="Ukraine">Ukrainian</div>
+                                </div>
+                            </div>
+                            <h2>Themes</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div id="night-mode">
+                                <img src="images/icons/moon.svg" alt="Moon">
+                                <span>Night mode</span>
+                            </div>
+                            <label>
+                                <input type="checkbox" class="ios-switch" id="public-switch-checkbox" name="public-switch-checkbox">
+                                <div>
+                                    <div></div>
+                                </div>
+                                <label for="public-switch-checkbox" class="checkbox-label" data-off="OFF" data-on="ON"></label>
+                            </label>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <div class="ui checkbox">
+                                <input name="switch" type="checkbox" id="switch" required>
+                                <label for="switch">Automatically switch to night mode from:</label>
+                            </div>
+                            <div class="ui grid three-inputs">
+                                <div id="pm" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">10:00 pm</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">00:00 pm</div>
+                                        <div class="item">01:00 pm</div>
+                                        <div class="item">02:00 pm</div>
+                                        <div class="item">03:00 pm</div>
+                                        <div class="item">04:00 pm</div>
+                                        <div class="item">05:00 pm</div>
+                                        <div class="item">06:00 pm</div>
+                                        <div class="item">07:00 pm</div>
+                                        <div class="item">08:00 pm</div>
+                                        <div class="item">09:00 pm</div>
+                                        <div class="item">10:00 pm</div>
+                                        <div class="item">11:00 pm</div>
+                                        <div class="item">12:00 pm</div>
+                                    </div>
+                                </div>
+                                <div>to</div>
+                                <div id="am" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">10:00 am</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">00:00 am</div>
+                                        <div class="item">01:00 am</div>
+                                        <div class="item">02:00 am</div>
+                                        <div class="item">03:00 am</div>
+                                        <div class="item">04:00 am</div>
+                                        <div class="item">05:00 am</div>
+                                        <div class="item">06:00 am</div>
+                                        <div class="item">07:00 am</div>
+                                        <div class="item">08:00 am</div>
+                                        <div class="item">09:00 am</div>
+                                        <div class="item">10:00 am</div>
+                                        <div class="item">11:00 am</div>
+                                        <div class="item">12:00 am</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of the 3 Tab. Interface-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

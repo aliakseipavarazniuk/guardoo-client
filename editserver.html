@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="page description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2980B9">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2980B9">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2980B9">
+    <title>Editserver</title>
+    <link rel="icon" type="image/png" href="/path/favicon.png" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/path/favicon.ico" /><![endif]-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/rawline.css" rel="stylesheet">
+    <link href="css/semantic.min.css" rel="stylesheet">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="images/icons/logo.svg" alt="Logo"></a>
+        <a class="click" href="#">
+            <img src="images/icons/bars-blue.svg" alt="Blue bars">
+        </a>
+        <div class="welcome">
+            <a href="#" id="pop-up">
+                <span>Welcome back, John Doe!</span>
+                <img src="images/icons/default-avatar.svg" alt="Defaul avatar">
+                <img src="images/icons/arrow-header.svg" alt="Header arrow">
+            </a>
+            <!-- Pop-up -->
+            <div class="ui popup transition">
+                <div class="pop-up-menu">
+                    <a href="settings.html">Account Settings</a>
+                    <a href="#">Add Website</a>
+                    <a href="billing.html">Billing</a>
+                </div>
+            </div>
+            <!-- Pop-up -->
+        </div>
+    </header>
+    <div class="page">
+        <!-- Hamburger-menu -->
+        <div class="mobile-modal-menu">
+            <a class="burger" href="#">
+                <img src="images/icons/bars-white.svg" alt="White bars">
+            </a>
+            <div class="ui secondary vertical menu">
+                <a class="active item" href="server.html">Server</a>
+                <a class="item" href="deploy.html">Domain</a>
+                <a class="item">Firewall</a>
+                <a class="item" href="support.html">Support</a>
+                <a class="item">Affiliate</a>
+                <a class="item" href="billing.html">Billing</a>
+                <a class="item" href="account_settings.php">Settings</a>
+                <a class="item">Logout</a>
+            </div>
+        </div>
+        <!-- Hamburger-menu -->
+        <!-- Side-menu -->
+        <div id="side">
+            <div class="sidebar">
+                <ul>
+                    <li><a class="active" href="#">
+                            <img src="images/side-menu-icons/server-active.svg" alt="Active server">
+                            <span>Server</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/domain.svg" alt="Domain">
+                            <span>Domain</span></a>
+                    </li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/firewall.svg" alt="Firewall">
+                            <span>Firewall</span></a></li>
+                    <li><a href="support.html">
+                            <img src="images/side-menu-icons/support.svg" alt="Support">
+                            <span>Support</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/affilate.svg" alt="Affiliate">
+                            <span>Affiliate</span></a></li>
+                    <li><a href="billing.html">
+                            <img src="images/side-menu-icons/billing.svg" alt="Billing">
+                            <span>Billing</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side-menu -->
+        <div id="container">
+            <div>
+                <div class="center-ubuntu">
+                    <div id="editserver-header">
+                        <img src="images/icons/ubuntu-blue.svg" alt="Blue ubuntu">
+                        <span class="snapshot">
+                            <label>Ubuntu</label>
+                            <input type="text">
+                        </span>
+                    </div>
+                    <ul class="tabs-deploy">
+                        <li class="active" data-tab-id="details"><span>Details</span></li>
+                        <li data-tab-id="usage"><span>Usage</span></li>
+                        <li data-tab-id="settings"><span>Settings</span></li>
+                        <li data-tab-id="snapshots"><span>Snapshots</span></li>
+                        <li data-tab-id="backups"><span>Backups</span></li>
+                    </ul>
+                    <!-- 1 Tab. Details-->
+                    <div class="tabs-content active" data-tab-id="details">
+                        <div id="details">
+                            <div>
+                                <figure>
+                                    <img src="images/flags/de.svg" alt="Germany">
+                                    <figcaption>Frankfurt</figcaption>
+                                    <figcaption>Germany</figcaption>
+                                    <figcaption>163.231.192.161</figcaption>
+                                    <figcaption><b class="circle-green"></b><span>Active</span></figcaption>
+                                </figure>
+                                <div>
+                                    <p><b>OS:</b><span>Ubuntu 16.04 gnome x32</span></p>
+                                    <p><b>Charges:</b><span>0.53€ / h</span></p>
+                                    <p><b>User:</b><span>root</span></p>
+                                    <p>
+                                        <b>Password:</b>
+                                        <div id="password">
+                                            <input id="password-field" type="password" class="masked" name="password" value="image pass">
+                                            <span id='toggle-password'>
+                                                <img src="images/icons/eye.svg" alt="Eye">
+                                                <img src="images/icons/eye-blue.svg" alt="Blue eye">
+                                            </span>
+                                            <span class='copy'>
+                                                <img src="images/icons/copy.svg" alt="Copy">
+                                                <img src="images/icons/copy-blue.svg" alt="Blue copy">
+                                            </span>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div>
+                                    <!-- Color Picker -->
+                                    <div class="tags-field">
+                                        <b>Tags:</b>
+                                        <div class="tags-all">
+                                            <div class="tag-box">
+                                                <span class="tag-name">Forum</span>
+                                                <img class="close" src="images/icons/close.svg" alt="Close">
+                                            </div>
+                                        </div>
+                                        <div class="ui pointing dropdown icon button add-tag">
+                                            <img src="images/icons/plus.svg" alt="Plus">
+                                            <div class="menu">
+                                                <div id="grid-input" class="ui grid">
+                                                    <div class="ui large input">
+                                                        <input type="text" id="tag-input" name="tag-input" required>
+                                                        <label for="tag-input">Enter tag name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" checked="checked" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <div class="field tag-color">
+                                                    <div class="ui radio checkbox">
+                                                        <input name="color" type="radio">
+                                                        <label></label>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="item">
+                                                    <button class="ui primary basic button add-tag-name">Add</button>
+                                                </div>
+                                                <div class="item">
+                                                    <button class="ui secondary basic button">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  End of the Color Picker -->
+                                </div>
+                            </div>
+                            <div>
+                                <figure>
+                                    <figcaption>CPU (1vCore): <b>62%</b></figcaption>
+                                    <img src="images/graphs/graph-blue.png" alt="Blue graph">
+                                </figure>
+                                <figure>
+                                    <figcaption>RAM: <b>62% </b>of 512 MB</figcaption>
+                                    <img src="images/graphs/graph-blue.png" alt="Blue graph">
+                                </figure>
+                                <figure>
+                                    <figcaption>Storage: <b>8 GB </b>of 30 GB</figcaption>
+                                    <div class="ui green tiny progress" id="graph5">
+                                        <div class="bar"></div>
+                                    </div>
+                                </figure>
+                            </div>
+                            <div id="details-footer-button">
+                                <a href="#">Restart</a>
+                                <a href="#">Stop</a>
+                                <a href="#">Reinstall</a>
+                                <a href="#">Destroy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of the 1 Tab. Details-->
+                    <!-- 2 Tab. Usage-->
+                    <div class="tabs-content" data-tab-id="usage">
+                        <div id="usage">
+                            <h2>Monthly Bandwidth</h2>
+                            <ul class="monthly">
+                                <li><span>Last 24h</span></li>
+                                <li><span>Last week</span></li>
+                                <li class="active"><span>Last month</span></li>
+                                <li><span>Last Year</span></li>
+                            </ul>
+                            <!-- 1 Slide Tab. Last 24h -->
+                            <div class="monthly-content">
+                                <p>Last 24h</p>
+                            </div>
+                            <!--End of the 1 Slide Tab. Last 24h -->
+                            <!-- 2 Slide Tab. Last week -->
+                            <div class="monthly-content">
+                                <p>Last week</p>
+                            </div>
+                            <!--End of the 2 Slide Tab. Last week -->
+                            <!-- 3 Slide Tab. Last month -->
+                            <div class="monthly-content active">
+                                <ul>
+                                    <li><b>Usage:</b> 125 GB of <b>∞</b></li>
+                                    <li>
+                                        <div class="circle-pink"></div><b>Received:</b> 80 GB
+                                    </li>
+                                    <li>
+                                        <div class="circle-blue"></div><b>Sent:</b> 45 GB
+                                    </li>
+                                </ul>
+                                <img src="images/graphs/graph2.png" alt="Graph">
+                            </div>
+                            <!--End of the 3 Slide Tab. Last month -->
+                            <!-- 4 Slide Tab. Last year -->
+                            <div class="monthly-content">
+                                <p>Last year</p>
+                            </div>
+                            <!--End of the 4 Slide Tab. Last year -->
+                            <h2>CPU Usage</h2>
+                            <ul class="cpu">
+                                <li><span>Last 24h</span></li>
+                                <li><span>Last week</span></li>
+                                <li class="active"><span>Last month</span></li>
+                                <li><span>Last Year</span></li>
+                            </ul>
+                            <!-- 1 Slide Tab. Last 24h -->
+                            <div class="cpu-content">
+                                <p>Last 24h</p>
+                            </div>
+                            <!--End of the 1 Slide Tab. Last 24h -->
+                            <!-- 2 Slide Tab. Last week -->
+                            <div class="cpu-content">
+                                <p>Last week</p>
+                            </div>
+                            <!--End of the 2 Slide Tab. Last week -->
+                            <!-- 3 Slide Tab. Last month -->
+                            <div class="cpu-content active">
+                                <img src="images/graphs/graph3.png" alt="Graph">
+                            </div>
+                            <!--End of the 3 Slide Tab. Last month -->
+                            <!-- 4 Slide Tab. Last year -->
+                            <div class="cpu-content">
+                                <p>Last year</p>
+                            </div>
+                            <!--End of the 4 Slide Tab. Last year -->
+                            <h2>RAM Usage</h2>
+                            <ul class="ram">
+                                <li><span>Last 24h</span></li>
+                                <li><span>Last week</span></li>
+                                <li class="active"><span>Last month</span></li>
+                                <li><span>Last Year</span></li>
+                            </ul>
+                            <!-- 1 Slide Tab. Last 24h -->
+                            <div class="ram-content">
+                                <p>Last 24h</p>
+                            </div>
+                            <!--End of the 1 Slide Tab. Last 24h -->
+                            <!-- 2 Slide Tab. Last week -->
+                            <div class="ram-content">
+                                <p>Last week</p>
+                            </div>
+                            <!--End of the 2 Slide Tab. Last week -->
+                            <!-- 3 Slide Tab. Last month -->
+                            <div class="ram-content active">
+                                <img src="images/graphs/graph4.png" alt="Graph">
+                            </div>
+                            <!--End of the 3 Slide Tab. Last month -->
+                            <!-- 4 Slide Tab. Last year -->
+                            <div class="ram-content">
+                                <p>Last year</p>
+                            </div>
+                            <!--End of the 4 Slide Tab. Last year -->
+                        </div>
+                    </div>
+                    <!--End of the 2 Tab. Usage-->
+                    <!-- 3 Tab. Settings-->
+                    <div class="tabs-content" data-tab-id="settings">
+                        <ul id="settings-slide">
+                            <li class="active"><span>Network</span></li>
+                            <li><span>Firewall</span></li>
+                            <li><span>Custom ISO</span></li>
+                            <li><span>Change Plan</span></li>
+                            <li><span>Change OS</span></li>
+                        </ul>
+                        <!-- 1 Slide Tab. Network -->
+                        <div class="settings-slide-content active">
+                            <h2>Public IPv4 Network</h2>
+                            <table id="settings-network-table">
+                                <tr>
+                                    <th>Adress</th>
+                                    <th>Netmask</th>
+                                    <th>Gateway</th>
+                                    <th>Reverse DNS</th>
+                                </tr>
+                                <tr>
+                                    <td>23.343.34345</td>
+                                    <td>23.34895.45</td>
+                                    <td>123.45.66</td>
+                                    <td><span>34.56.56</span></td>
+                                </tr>
+                            </table>
+                            <div class="button">
+                                <a>
+                                    <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                    <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                    <span>Add IPv4 adress</span>
+                                </a>
+                            </div>
+                            <p id="IPv4-details-click"><span class="manage-arrow"></span>Details</p>
+                            <ul id="IPv4-details">
+                                <li>
+                                    <div class="circle-black"></div>Pv4 Addresses cost <b>$2/month</b> or <b>$0.003/hour.</b>
+                                </li>
+                                <li>
+                                    <div class="circle-black"></div>Addresses must remain <b>active for 60 minutes</b> before they can be removed.
+                                </li>
+                                <li>
+                                    <div class="circle-black"></div>You will need to manually configure additional IPs on your VPS
+                                </li>
+                                <li>
+                                    <div class="circle-black"></div>You are limited to a maximum of 2 additional IPv4 IPs per VPS
+                                </li>
+                            </ul>
+                            <div id="public-switch">
+                                <h2>Public IPv6 Network</h2>
+                                <label>
+                                    <input type="checkbox" class="ios-switch" id="public-switch-checkbox" name="public-switch-checkbox">
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <label for="public-switch-checkbox" class="checkbox-label" data-off="OFF" data-on="ON"></label>
+                                </label>
+                            </div>
+                            <div id="public-switch-content">
+                                <table id="public-switch-table">
+                                    <tr>
+                                        <th>Adress</th>
+                                        <th>Netmask</th>
+                                        <th>CIDR</th>
+                                        <th>Gateway</th>
+                                    </tr>
+                                    <tr>
+                                        <td>23.343.34345</td>
+                                        <td>23.34895.45</td>
+                                        <td>64</td>
+                                        <td>34.56.56</td>
+                                    </tr>
+                                </table>
+                                <h3 id="recursive-h3">Recursive DNS</h3>
+                                <p id="recursive-p">234.564.555.78</p>
+                                <br>
+                                <h3 id="reverse-h3">Reverse DNS</h3>
+                                <table id="public-reverse-table">
+                                    <tr>
+                                        <th>IP</th>
+                                        <th>Reverse DNS</th>
+                                        <th>Actions</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>No entries found</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                <div id="reverse-inputs">
+                                    <div class="ui grid public-switch-inputs">
+                                        <div class="ui large input">
+                                            <input type="text" id="public-input-ip" name="public-input-ip" required>
+                                            <label for="public-input-ip">IP</label>
+                                        </div>
+                                        <div class="ui large input">
+                                            <input type="text" id="public-input-reverse" name="public-input-reverse" required>
+                                            <label for="public-input-reverse">Reverse DNS</label>
+                                        </div>
+                                        <div>Add</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="private-switch">
+                                <h2>Private Network</h2>
+                                <span id="private-details-click"><span class="manage-arrow"></span>Details</span>
+                                <label>
+                                    <input type="checkbox" class="ios-switch" id="private-switch-checkbox" name="private-switch-checkbox">
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <label for="private-switch-checkbox" class="checkbox-label" data-off="OFF" data-on="ON"></label>
+                                </label>
+                            </div>
+                            <div id="private-switch-content">
+                                <ul id="private-details">
+                                    <li>
+                                        <div class="circle-black"></div>Private network traffic is <b>unmetered.</b>
+                                    </li>
+                                    <li>
+                                        <div class="circle-black"></div>Private networks are <b>per-location</b> (for example, a machine in New Jersey cannot communicate with a machine in Chicago).
+                                    </li>
+                                    <li>
+                                        <div class="circle-black"></div>You will need to <b>manually configure</b> your private network connection.
+                                    </li>
+                                    <li>
+                                        <div class="circle-black"></div>You can use any IPs you like on the private network. We assign one IP by default, but you can ignore it and use other ones if you like.
+                                    </li>
+                                </ul>
+                                <div id="private-parameters">
+                                    <div>
+                                        <span>Private IP</span>
+                                        <span>Netmask</span>
+                                        <span>Getway</span>
+                                    </div>
+                                    <div>
+                                        <span>343.345.55</span>
+                                        <span>45.45.567</span>
+                                        <span>n/a</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of the 1 Slide Tab. Network -->
+                        <!-- 2 Slide Tab. Firewall -->
+                        <div class="settings-slide-content">
+                            <h2 id="settings-firewall-h2">Firewall</h2>
+                            <div id="settings-firewall">
+                                <a id="settings-firewall-click">Manage</a>
+                                <div id="no-firewall" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">No firewall</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">No firewall</div>
+                                        <div class="item">No firewall</div>
+                                        <div class="item">No firewall</div>
+                                    </div>
+                                </div>
+                                <div id="settings-firewall-button">Update firewall group</div>
+                            </div>
+                        </div>
+                        <!-- End of the 2 Slide Tab. Firewall -->
+                        <!-- 3 Slide Tab. Custom ISO -->
+                        <div class="settings-slide-content">
+                            <h2 id="custom-h2">Custom ISO</h2>
+                            <div class="distributions">
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/ubuntu.svg" alt="Ubuntu">
+                                            <img src="images/icons/ubuntu-blue.svg" alt="Blue ubuntu">
+                                        </span>
+                                        <p>Ubuntu</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/windows.svg" alt="Windows">
+                                            <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                        </span>
+                                        <p>Windows</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/windows.svg" alt="Windows">
+                                            <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                        </span>
+                                        <p>Windows</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/windows.svg" alt="Windows">
+                                            <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                        </span>
+                                        <p>Windows</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="custom-iso">
+                                <a id="custom-iso-click">Manage</a>
+                                <div id="lived" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">lived.fgf-344.46.56.iso</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">lived.fgf-344.46.56.iso</div>
+                                        <div class="item">lived.fgf-344.46.56.iso</div>
+                                        <div class="item">lived.fgf-344.46.56.iso</div>
+                                    </div>
+                                </div>
+                                <div class="attach-button">Attach ISO and Reboot</div>
+                                <h2>ISO library</h2>
+                                <div id="standard" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">344.46.56-standard-x63</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">344.46.56-standard-x63</div>
+                                        <div class="item">344.46.56-standard-x63</div>
+                                        <div class="item">344.46.56-standard-x63</div>
+                                    </div>
+                                </div>
+                                <div class="attach-button">Attach ISO and Reboot</div>
+                                <p><b>Note:</b> Your server was originally deployed using one of our installers. If you reinstall the operating system via a custom ISO, the root password in your control panel will no longer be valid.</p>
+                            </div>
+                        </div>
+                        <!-- End of the 3 Slide Tab. Custom ISO -->
+                        <!-- 4 Slide Tab. Change Plan -->
+                        <div class="settings-slide-content">
+                            <h2 id="change-plan-h2">Change Plan</h2>
+                            <div class="size">
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="upgrade-button">Upgrade Server</div>
+                            </div>
+                            <p id="change-plan-p"><b>Note:</b> Downgrading is currently not supported. Shrinking the hard disk is not possible without risking data loss.</p>
+                        </div>
+                        <!-- End of the 4 Slide Tab. Change Plan -->
+                        <!-- 5 Slide Tab. Change OS -->
+                        <div class="settings-slide-content">
+                            <h2 id="change-os-h2">New Operating System</h2>
+                            <div class="distributions">
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/ubuntu.svg" alt="Ubuntu">
+                                            <img src="images/icons/ubuntu-blue.svg" alt="Blue ubuntu">
+                                        </span>
+                                        <p>Ubuntu</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/windows.svg" alt="Windows">
+                                            <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                        </span>
+                                        <p>Windows</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/windows.svg" alt="Windows">
+                                            <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                        </span>
+                                        <p>Windows</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="distributions-card">
+                                    <div>
+                                        <span>
+                                            <img src="images/icons/windows.svg" alt="Windows">
+                                            <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                        </span>
+                                        <p>Windows</p>
+                                    </div>
+                                    <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                        <div class="text default">Select Version</div>
+                                        <span>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                        </span>
+                                        <div class="menu transition hidden" tabindex="-1">
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                            <div class="item">16.04 x64</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="reinstall-button">Reinstall</div>
+                            </div>
+                            <p id="changes-os-p"><b>Warning:</b> Changing to a different operating system will wipe all the data on your server.</p>
+                        </div>
+                        <!-- End of the 5 Slide Tab. Change OS -->
+                    </div>
+                    <!--End of the 3 Tab. Settings-->
+                    <!-- 4 Tab. Snapshots-->
+                    <div class="tabs-content" data-tab-id="snapshots">
+                        <h2>Snapshots</h2>
+                        <table class="snapshots-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15GB</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>2017-02-01</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="snapshots-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15GB</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>2017-02-01</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="snapshots-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15GB</td>
+                            </tr>
+                            <tr>
+                                <td>Cost</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Date</td>
+                                <td>2017-02-01</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="snapshots">
+                            <tr>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>OS</th>
+                                <th>Size</th>
+                                <th>Cost</th>
+                                <th>Date</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15GB</td>
+                                <td>-</td>
+                                <td>2017-02-01</td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                                <td>15GB</td>
+                                <td>-</td>
+                                <td>2017-02-01</td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Snap name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15GB</td>
+                                <td>-</td>
+                                <td>2017-02-01</td>
+                                <td>
+                                    <span class="snapshots-pop-up" data-tooltip="Create from Cloud" data-position="top center">
+                                        <img src="images/icons/cloud.svg" alt="Cloud">
+                                        <img src="images/icons/cloud-blue.svg" alt="Blue cloud">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Download Snapshots" data-position="top center">
+                                        <img src="images/icons/download.svg" alt="Download">
+                                        <img src="images/icons/download-blue.svg" alt="Blue download">
+                                    </span>
+                                    <span class="snapshots-pop-up" data-tooltip="Remove Snapshots" data-position="top center">
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="button">
+                            <a href="#">
+                                <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                <span>Add new Snapshot</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--End of the 4 Tab. Snapshots-->
+                    <!-- 5 Tab. Backups-->
+                    <div class="tabs-content" data-tab-id="backups">
+                        <h2 id="backup-h2">Backup History</h2>
+                        <table class="backup-history-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15Gb</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>Expired in 3 days</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="backup-history-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15Gb</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>Expired in 3 days</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="backup-history-small">
+                            <tr>
+                                <td>Name</td>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ID</td>
+                                <td>g_snap_dg4857</td>
+                            </tr>
+                            <tr>
+                                <td>OS</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                            </tr>
+                            <tr>
+                                <td>Size</td>
+                                <td>15Gb</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>Expired in 3 days</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table id="backup-history">
+                            <tr>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>OS</th>
+                                <th>Size</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15Gb</td>
+                                <td>Expired in 3 days</td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/linux.svg" alt="Linux"></td>
+                                <td>15Gb</td>
+                                <td>Expired in 3 days</td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="table-name snapshot">
+                                    <label class="snapshots-pop-up">Custom Back name</label>
+                                    <input type="text">
+                                </td>
+                                <td>g_snap_dg4857</td>
+                                <td><img src="images/icons/windows-blue.svg" alt="Blue windows"></td>
+                                <td>15Gb</td>
+                                <td>Expired in 3 days</td>
+                                <td>
+                                    <span>
+                                        <img src="images/icons/trash.svg" alt="Trash">
+                                        <img src="images/icons/trash-red.svg" alt="Red trash">
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2>Backup Schedule</h2>
+                        <div id="backup-schedule">
+                            <p><b>Next scheduled backup:</b> 2017-11-10 13:00 UTC</p>
+                            <div class="ui fluid selection large dropdown backup-schedule-dropdown" tabindex="0">
+                                <div class="text">Weekly</div>
+                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                <div class="menu transition hidden" tabindex="-1">
+                                    <div class="item">Daily</div>
+                                    <div class="item">Weekly</div>
+                                    <div class="item">Monthly</div>
+                                </div>
+                            </div>
+                            <div class="backup-input-flex">
+                                <div id="daily" class="ui fluid selection large dropdown backup-schedule-dropdown" tabindex="0">
+                                    <div class="text">Monday</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">Sunday</div>
+                                        <div class="item">Monday</div>
+                                        <div class="item">Tuesday</div>
+                                        <div class="item">Wednesday</div>
+                                        <div class="item">Thursday</div>
+                                        <div class="item">Friday</div>
+                                        <div class="item">Saturday</div>
+                                    </div>
+                                </div>
+                                <div class="ui fluid selection large dropdown backup-schedule-dropdown" tabindex="0">
+                                    <div class="text">00:00 UTC</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">00:00 UTC</div>
+                                        <div class="item">01:00 UTC</div>
+                                        <div class="item">02:00 UTC</div>
+                                        <div class="item">03:00 UTC</div>
+                                        <div class="item">04:00 UTC</div>
+                                        <div class="item">05:00 UTC</div>
+                                        <div class="item">06:00 UTC</div>
+                                        <div class="item">07:00 UTC</div>
+                                        <div class="item">08:00 UTC</div>
+                                        <div class="item">09:00 UTC</div>
+                                        <div class="item">10:00 UTC</div>
+                                        <div class="item">11:00 UTC</div>
+                                        <div class="item">12:00 UTC</div>
+                                        <div class="item">13:00 UTC</div>
+                                        <div class="item">14:00 UTC</div>
+                                        <div class="item">15:00 UTC</div>
+                                        <div class="item">16:00 UTC</div>
+                                        <div class="item">17:00 UTC</div>
+                                        <div class="item">18:00 UTC</div>
+                                        <div class="item">19:00 UTC</div>
+                                        <div class="item">20:00 UTC</div>
+                                        <div class="item">21:00 UTC</div>
+                                        <div class="item">22:00 UTC</div>
+                                        <div class="item">23:00 UTC</div>
+                                        <div class="item">24:00 UTC</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">Update</div>
+                        </div>
+                        <h2>Backup Status</h2>
+                        <div id="backup-status">
+                            <p>Automatic backups are currently enable for this server</p>
+                            <div class="button">Disable Automatic Backups</div>
+                        </div>
+                    </div>
+                    <!--End of the 5 Tab. Backups-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

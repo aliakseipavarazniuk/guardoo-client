@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="page description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2980B9">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2980B9">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2980B9">
+    <title>Deploy</title>
+    <link rel="icon" type="image/png" href="/path/favicon.png" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="/path/favicon.ico" /><![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/rawline.css" rel="stylesheet">
+    <link href="css/semantic.min.css" rel="stylesheet">
+    <link href="css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="js/perfect-scrollbar.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="images/icons/logo.svg" alt="Logo"></a>
+        <a class="click" href="#">
+            <img src="images/icons/bars-blue.svg" alt="Blue bars">
+        </a>
+        <div class="welcome">
+            <a href="#" id="pop-up">
+                <span>Welcome back, John Doe!</span>
+                <img src="images/icons/default-avatar.svg" alt="Defaul avatar">
+                <img src="images/icons/arrow-header.svg" alt="Header arrow">
+            </a>
+            <!-- Pop-up -->
+            <div class="ui popup transition">
+                <div class="pop-up-menu">
+                    <a href="settings.html">Account Settings</a>
+                    <a href="#">Add Website</a>
+                    <a href="billing.html">Billing</a>
+                </div>
+            </div>
+            <!-- Pop-up -->
+        </div>
+    </header>
+    <div class="page">
+        <!-- Hamburger-menu -->
+        <div class="mobile-modal-menu">
+            <a class="burger" href="#">
+                <img src="images/icons/bars-white.svg" alt="White bars">
+            </a>
+            <div class="ui secondary vertical menu">
+                <a class="active item" href="server.html">Server</a>
+                <a class="item" href="deploy.html">Domain</a>
+                <a class="item">Firewall</a>
+                <a class="item" href="support.html">Support</a>
+                <a class="item">Affiliate</a>
+                <a class="item" href="billing.html">Billing</a>
+                <a class="item" href="account_settings.php">Settings</a>
+                <a class="item">Logout</a>
+            </div>
+        </div>
+        <!-- Hamburger-menu -->
+        <!-- Side-menu -->
+        <div id="side">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/server.svg" alt="Server">
+                            <span>Server</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/domain.svg" alt="Domain">
+                            <span>Domain</span></a>
+                    </li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/firewall.svg" alt="Firewall">
+                            <span>Firewall</span></a></li>
+                    <li><a href="support.html">
+                            <img src="images/side-menu-icons/support.svg" alt="Support">
+                            <span>Support</span></a></li>
+                    <li><a href="#">
+                            <img src="images/side-menu-icons/affilate.svg" alt="Affiliate">
+                            <span>Affiliate</span></a></li>
+                    <li><a href="billing.html">
+                            <img src="images/side-menu-icons/billing.svg" alt="Billing">
+                            <span>Billing</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Side-menu -->
+        <div id="container">
+            <div>
+                <div class="center-domain">
+                    <h2>Create New Instance</h2>
+                    <ul class="tabs-domain">
+                        <li class="active" data-tab-id="cloud"><span>Cloud Instance</span></li>
+                        <li data-tab-id="storage"><span>Storage Instance</span></li>
+                        <li data-tab-id="dedicated"><span>Dedicated Instance</span></li>
+                    </ul>
+                    <!-- 1 Tab. Cloud Instance-->
+                    <div class="tabs-content active" data-tab-id="cloud">
+                        <div id="cloud">
+                            <div class="cloud-title">
+                                <h3>1. Choose your location</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <div id="location">
+                                <div class="location-card">
+                                    <img src="images/flags/nl.svg" alt="Netherlands">
+                                    <p>Amsterdam</p>
+                                    <h5>Netherlands</h5>
+                                </div>
+                                <div class="location-card">
+                                    <img src="images/flags/de.svg" alt="Germany">
+                                    <p id="frankfurt">Frankfurt</p>
+                                    <h5 id="germany">Germany</h5>
+                                </div>
+                            </div>
+                            <div class="cloud-title">
+                                <h3>2. Choose your image</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <ul class="choose">
+                                <li class="active"><span>Distributions</span></li>
+                                <li><span>One-click apps</span></li>
+                                <li><span>From ISO</span></li>
+                                <li><span>From Snapshot</span></li>
+                            </ul>
+                            <!-- 1 Slide Tab. Distributions -->
+                            <div class="choose-content active">
+                                <div class="distributions">
+                                    <div class="distributions-card">
+                                        <div>
+                                            <span>
+                                                <img src="images/icons/ubuntu.svg" alt="Ubuntu">
+                                                <img src="images/icons/ubuntu-blue.svg" alt="Blue ubuntu">
+                                            </span>
+                                            <p>Ubuntu</p>
+                                        </div>
+                                        <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                            <div class="text default">Select Version</div>
+                                            <span>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                            </span>
+                                            <div class="menu transition hidden">
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="distributions-card">
+                                        <div>
+                                            <span>
+                                                <img src="images/icons/windows.svg" alt="Windows">
+                                                <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                            </span>
+                                            <p>Windows</p>
+                                        </div>
+                                        <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                            <div class="text default">Select Version</div>
+                                            <span>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                            </span>
+                                            <div class="menu transition hidden" tabindex="-1">
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="distributions-card">
+                                        <div>
+                                            <span>
+                                                <img src="images/icons/windows.svg" alt="Windows">
+                                                <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                            </span>
+                                            <p>Windows</p>
+                                        </div>
+                                        <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                            <div class="text default">Select Version</div>
+                                            <span>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                            </span>
+                                            <div class="menu transition hidden" tabindex="-1">
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="distributions-card">
+                                        <div>
+                                            <span>
+                                                <img src="images/icons/windows.svg" alt="Windows">
+                                                <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                            </span>
+                                            <p>Windows</p>
+                                        </div>
+                                        <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                            <div class="text default">Select Version</div>
+                                            <span>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                            </span>
+                                            <div class="menu transition hidden" tabindex="-1">
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of the 1 Slide Tab. Distributions -->
+                            <!-- 2 Slide Tab. One-click apps -->
+                            <div class="distributions">
+                                <div class="choose-content">
+                                    <div class="distributions-card">
+                                        <div>
+                                            <span>
+                                                <img src="images/icons/windows.svg" alt="Windows">
+                                                <img src="images/icons/windows-blue.svg" alt="Blue windows">
+                                            </span>
+                                            <p>Windows</p>
+                                        </div>
+                                        <div class="distributions-card-dropdown ui fluid selection dropdown">
+                                            <div class="text default">Select Version</div>
+                                            <span>
+                                                <img src="images/icons/arrow.svg" alt="Arrow">
+                                                <img src="images/icons/arrow-blue.svg" alt="Blue arrow">
+                                            </span>
+                                            <div class="menu transition hidden" tabindex="-1">
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                                <div class="item">16.04 x64</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 Slide Tab. End of the One-click apps -->
+                            <!-- 3 Slide Tab. From ISO -->
+                            <div class="choose-content">
+                                <h2>From ISO</h2>
+                            </div>
+                            <!-- End of the 3 Slide Tab. From ISO -->
+                            <!-- 4 Slide Tab. From Snapshot -->
+                            <div class="choose-content">
+                                <h2>From Snapshot</h2>
+                            </div>
+                            <!-- End of the 4 Slide Tab. From Snapshot -->
+                            <div class="cloud-title">
+                                <h3>3. Choose your size</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <div class="size">
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="size-card">
+                                    <div class="size-card-price">
+                                        <div><span>$ </span><span>20</span><span>/mo</span></div>
+                                        <p>$0,0015/h</p>
+                                    </div>
+                                    <div class="size-card-parameters">
+                                        <div>
+                                            <span>CPU</span>
+                                            <span>RAM</span>
+                                            <span>SSD Disk</span>
+                                            <span>Traffic</span>
+                                        </div>
+                                        <div>
+                                            <span>1</span>
+                                            <span>1GB</span>
+                                            <span>30GB</span>
+                                            <span>∞</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cloud-title">
+                                <h3>4. Choose your size</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <div class="size">
+                                <div class="ui checkbox">
+                                    <input name="IPv6" type="checkbox" id="IPv6" required>
+                                    <label for="IPv6">Enable IPv6</label>
+                                </div><br>
+                                <div class="ui checkbox">
+                                    <input name="Private" type="checkbox" id="Private" required>
+                                    <label for="Private">Enable Private Networking</label>
+                                </div><br>
+                                <div class="ui checkbox">
+                                    <input name="Automatic" type="checkbox" id="Automatic" required>
+                                    <label for="Automatic">Enable Automatic Backups <a class="ui tag label enable-automatic-backups"><span>$2/mo</span></a></label>
+                                </div>
+                            </div>
+                            <div class="cloud-title">
+                                <h3>5. Startup script</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <div class="cloud-script">
+                                <label class="cloud-script-card-script">
+                                    <span>
+                                        <img src="images/icons/file-blue.svg" alt="Blue file">
+                                        <img src="images/icons/file.svg" alt="File">
+                                    </span>
+                                    <span>My Script №1</span>
+                                    <div class="ui checkbox">
+                                        <input name="script" type="radio">
+                                        <label></label>
+                                    </div>
+                                </label>
+                                <label class="cloud-script-card-script">
+                                    <span>
+                                        <img src="images/icons/file-blue.svg" alt="Blue file">
+                                        <img src="images/icons/file.svg" alt="File">
+                                    </span>
+                                    <span>My Script №2</span>
+                                    <div class="ui checkbox">
+                                        <input name="script" type="radio">
+                                        <label></label>
+                                    </div>
+                                </label>
+                            </div>
+                            <p id="manage-scripts-click">
+                                <span class="manage-arrow"></span>
+                                Manage scripts
+                            </p>
+                            <div id="manage-scripts">
+                                <table id="scripts">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Date modified</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-name snapshot">
+                                            <label class="snapshots-pop-up">Script 1</label>
+                                            <input type="text">
+                                        </td>
+                                        <td>PXE</td>
+                                        <td>2017-06-24 11:23:51</td>
+                                        <td>
+                                            <span class="scripts-pencil">
+                                                <img src="images/icons/edit.svg" alt="Edit">
+                                                <img src="images/icons/edit-blue.svg" alt="Blue edit">
+                                            </span>
+                                            <span>
+                                                <img src="images/icons/trash.svg" alt="Trash">
+                                                <img src="images/icons/trash-red.svg" alt="Red trash">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-name snapshot">
+                                            <label class="snapshots-pop-up">Script 2</label>
+                                            <input type="text">
+                                        </td>
+                                        <td>Boot</td>
+                                        <td>2017-06-24 11:31:33</td>
+                                        <td>
+                                            <span class="scripts-pencil">
+                                                <img src="images/icons/edit.svg" alt="Edit">
+                                                <img src="images/icons/edit-blue.svg" alt="Blue edit">
+                                            </span>
+                                            <span>
+                                                <img src="images/icons/trash.svg" alt="Trash">
+                                                <img src="images/icons/trash-red.svg" alt="Red trash">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="button">
+                                    <a>
+                                        <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                        <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                        <span>Add new Script</span>
+                                    </a>
+                                </div>
+                                <div id="manage-scripts-extra">
+                                    <div class="ui grid two-inputs">
+                                        <div class="ui input">
+                                            <input type="text" id="manage-scripts-extra-name" name="manage-scripts-extra-name" required>
+                                            <label for="manage-scripts-extra-name">Name</label>
+                                        </div>
+                                        <div id="boot" class="ui fluid selection large dropdown" tabindex="0">
+                                            <div class="text">Boot</div>
+                                            <img src="images/icons/arrow.svg" alt="Arrow">
+                                            <div class="menu transition hidden" tabindex="-1">
+                                                <div class="item">Boot №1</div>
+                                                <div class="item">Boot №2</div>
+                                                <div class="item">Boot №3</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <textarea>
+  #!/bin/sh
+
+  # NOTE: This is an example that sets up SSH authorization. To use it, you'd need to replace "ssh-rsa AA... youremail@example.com" with your SSH public.
+  # You can replace this entire script with anything you'd like, there is no need to keep it
+
+  mkdir -p /root/.ssh
+  chmod 600 /root/.ssh
+  echo ssh-rsa AA... youremail@example.com > /root/.ssh/authorized_keys
+  chmod 700 /root/.ssh/authorized_keys
+</textarea>
+                                    <div class="button-add">Add</div>
+                                </div>
+                            </div>
+                            <div class="cloud-title">
+                                <h3>6. SSH Keys</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <div class="cloud-script">
+                                <label class="cloud-script-card-key">
+                                    <span>
+                                        <img src="images/icons/key-blue.svg" alt="Blue key">
+                                        <img src="images/icons/key.svg" alt="Key">
+                                    </span>
+                                    <span>My SSH k №1</span>
+                                    <div class="ui checkbox">
+                                        <input name="key" type="radio">
+                                        <label></label>
+                                    </div>
+                                </label>
+                                <label class="cloud-script-card-key">
+                                    <span>
+                                        <img src="images/icons/key-blue.svg" alt="Blue key">
+                                        <img src="images/icons/key.svg" alt="Key">
+                                    </span>
+                                    <span>My SSH k №2</span>
+                                    <div class="ui checkbox">
+                                        <input name="key" type="radio">
+                                        <label></label>
+                                    </div>
+                                </label>
+                            </div>
+                            <p id="manage-keys-click"><span class="manage-arrow"></span>Manage SSH Keys</p>
+                            <div id="manage-keys">
+                                <table id="ssh-key">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Date modified</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-name snapshot">
+                                            <label class="snapshots-pop-up">SSH Key 1</label>
+                                            <input type="text">
+                                        </td>
+                                        <td>2017-06-24 11:23:51</td>
+                                        <td>
+                                            <span class="key-pencil">
+                                                <img src="images/icons/edit.svg" alt="Edit">
+                                                <img src="images/icons/edit-blue.svg" alt="Blue edit">
+                                            </span>
+                                            <span>
+                                                <img src="images/icons/trash.svg" alt="Trash">
+                                                <img src="images/icons/trash-red.svg" alt="Red trash">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-name snapshot">
+                                            <label class="snapshots-pop-up">SSH Key 2</label>
+                                            <input type="text">
+                                        </td>
+                                        <td>2017-06-24 11:23:51</td>
+                                        <td>
+                                            <span class="key-pencil">
+                                                <img src="images/icons/edit.svg" alt="Edit">
+                                                <img src="images/icons/edit-blue.svg" alt="Blue edit">
+                                            </span>
+                                            <span>
+                                                <img src="images/icons/trash.svg" alt="Trash">
+                                                <img src="images/icons/trash-red.svg" alt="Red trash">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="button">
+                                    <a>
+                                        <img class="button-plus" src="images/icons/plus.svg" alt="Plus">
+                                        <img class="button-plus" src="images/icons/plus-white.svg" alt="White plus">
+                                        <span>Add new SSH Key</span>
+                                    </a>
+                                </div>
+                                <div id="upload-button">Upload New SSH Key</div>
+                                <div id="manage-keys-extra">
+                                    <div class="ui grid">
+                                        <div class="ui input">
+                                            <input type="text" id="manage-keys-extra-name" name="manage-keys-extra-name" required>
+                                            <label for="manage-keys-extra-name">Name</label>
+                                        </div>
+                                    </div>
+                                    <textarea>
+  ssh-rsa AAAA….. you@example.com
+</textarea>
+                                    <div class="button-add">Add</div>
+                                </div>
+                            </div>
+                            <div class="cloud-title">
+                                <h3>7. Firewall</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <div id="choose-firewall-block">
+                                <div id="choose-firewall" class="ui fluid selection large dropdown" tabindex="0">
+                                    <div class="text">Choose Firewall</div>
+                                    <img src="images/icons/arrow.svg" alt="Arrow">
+                                    <div class="menu transition hidden" tabindex="-1">
+                                        <div class="item">Choose Firewall</div>
+                                        <div class="item">Choose Firewall</div>
+                                        <div class="item">Choose Firewall</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Manage exited Firewalls</p>
+                            <div class="cloud-title">
+                                <h3>8. Names and Numbers</h3>
+                                <div class="cloud-title-pop-up" data-tooltip="We give you the help" data-position="top center">
+                                    <img src="images/icons/question.svg" alt="Question">
+                                </div>
+                            </div>
+                            <div class="ui grid names-numbers">
+                                <div class="sixteen wide mobile sixteen wide tablet four wide computer screen column">
+                                    <span class="minus">-</span><span class="num-server"><input disabled id="i-num" readonly>Server</span><span class="plus">+</span>
+                                </div>
+                                <div class="sixteen wide mobile eigth wide tablet six wide computer screen column" id="input-server-hostname">
+                                    <div class="ui large input new-div new-div-input1">
+                                        <input type="text" id="server-hostname1" name="server-hostname1" required>
+                                        <label for="server-hostname1">Enter server hostname</label>
+                                    </div>
+                                    <div class="ui large input new-div new-div-input2">
+                                        <input type="text" id="server-hostname2" name="server-hostname2" required>
+                                        <label for="server-hostname2">Enter server hostname</label>
+                                    </div>
+                                    <div class="ui large input new-div new-div-input3">
+                                        <input type="text" id="server-hostname3" name="server-hostname3" required>
+                                        <label for="server-hostname3">Enter server hostname</label>
+                                    </div>
+                                </div>
+                                <div class="sixteen wide mobile eigth wide tablet six wide computer screen column" id="input-server-label">
+                                    <div class="ui large input new-div new-div-input1">
+                                        <input type="text" id="server-label1" name="server-label1" required>
+                                        <label for="server-label1">Enter server label</label>
+                                    </div>
+                                    <div class="ui large input new-div new-div-input2">
+                                        <input type="text" id="server-label2" name="server-label2" required>
+                                        <label for="server-label2">Enter server label</label>
+                                    </div>
+                                    <div class="ui large input new-div new-div-input3">
+                                        <input type="text" id="server-label3" name="server-label3" required>
+                                        <label for="server-label3">Enter server label</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui divider"></div>
+                            <div class="cloud-footer">
+                                <div>
+                                    <p>
+                                        <span>$</span>
+                                        <span>20</span>
+                                        <span>/mo</span>
+                                    </p>
+                                    <p>$0,0015/h</p>
+                                </div>
+                                <div>
+                                    <a href="#">Create now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of the Cloud Instance-->
+                    <!-- 2 Tab. Storage Instance-->
+                    <div class="tabs-content" data-tab-id="storage">
+                        <h2>Storage Instance</h2>
+                    </div>
+                    <!--End of the Storage Instance-->
+                    <!-- 3 Tab. Dedicated Instance-->
+                    <div class="tabs-content" data-tab-id="dedicated">
+                        <h2>Dedicated Instance</h2>
+                    </div>
+                    <!--End of the Dedicated Instance-->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
