@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="45px" viewBox="0 0 55 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Support" transform="translate(-882.000000, -323.000000)" stroke="#2980B9" stroke-width="2">
+            <g id="Group-8" transform="translate(883.000000, 324.000000)">
+                <path d="M44.7555556,31.3783784 C49.3088365,31.3783784 53,27.7361543 53,23.2432432 C53,18.7503322 49.3088365,14.8971541 44.7555556,14.8971541" id="Oval-10"></path>
+                <path d="M0,30.2162162 C4.55328094,30.2162162 8.24444444,26.6866334 8.24444444,22.1937223 C8.24444444,17.7008112 4.55328094,14.0585872 0,14.0585872" id="Oval-10" transform="translate(4.122222, 22.137402) rotate(-180.000000) translate(-4.122222, -22.137402) "></path>
+                <ellipse id="Oval-11" cx="18.2555556" cy="40.0945946" rx="2.94444444" ry="2.90540541"></ellipse>
+                <path d="M14.6417101,39.6372202 C9.5452908,39.498192 8.69035238,32.5654379 8.57914497,31.5835159 C8.50500669,30.9289012 8.50500669,25.077706 8.57914497,14.0299303 C10.7307364,4.72355363 16.7446108,0.0703652872 26.6207682,0.0703652872 C36.4969256,0.0703652872 42.5108001,4.72355363 44.6623915,14.0299303 L44.6914334,31.3740869" id="Path-18" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

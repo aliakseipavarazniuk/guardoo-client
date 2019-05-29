@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="18px" viewBox="0 0 27 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>credit card</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="financial-verification-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-234.000000, -465.000000)">
+        <g id="credit-card" transform="translate(234.000000, 465.000000)" stroke="#3B80B5">
+            <rect id="Rectangle" stroke-width="2" x="1" y="1" width="25" height="15.0689655" rx="1.8"></rect>
+            <path d="M1.125,6.06896552 L25.5818321,6.06896552" id="Path-64-Copy" stroke-width="3"></path>
+            <path d="M4.5,12.137931 L10.1426553,12.137931" id="Path-65" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>
