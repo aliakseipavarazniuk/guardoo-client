@@ -1,0 +1,13 @@
+{
+    "workbench.colorCustomizations": {
+        "[Ocean Dark Extended]": {
+            "editor.background": "#363941",
+            "tab.activeBackground": "#363941",
+            "tab.activeBorder": "#21252D",
+            "editorLineNumber.activeForeground": "#c0c5ce",
+            "editor.lineHighlightBackground": "#30333a",
+            "editor.wordHighlightBackground": "#3D4B5C"
+        },
+        "tab.unfocusedActiveBorder": "#fff0"
+    }
+}
